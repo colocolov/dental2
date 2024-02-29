@@ -35,7 +35,7 @@
   &__list
     @include fx-all
     flex-wrap: wrap
-    @media (max-width: 768px)
+    @include mediaPhone
       flex-direction: column
       align-items: flex-end
       justify-content: flex-start
@@ -44,9 +44,9 @@
     position: relative
     @include fx-all
     flex-wrap: wrap
-    @include font(600, 16, 20)
-    color: $text // ---------- ЦВЕТ ССЫЛОК НА ДЕСКТОПЕ
-    text-transform: uppercase
+    @include font(500, 16, 20)
+    color: $black // ---------- ЦВЕТ ССЫЛОК НА ДЕСКТОПЕ
+    // text-transform: uppercase
     transition: color 0.3s ease
     &:not(:last-child)
       margin-right: 39px
@@ -57,9 +57,15 @@
       display: block
       bottom: -6px
       width: 0%
-      height: 2px
-      background-color: $white
+      height: 1px
+      background-color: $green
       transition: width 0.5s ease
+    @media (any-hover: hover)
+      &:hover
+        &::before
+          width: 100%
+
+
     // уточнить!!!
     // &:last-child a
     //   transition: 0.3s linear
@@ -181,5 +187,77 @@
           transform: rotate(45deg)
           transition: transform .3s ease-in-out, top .3s ease-in-out
 
-// МЕНЮ ДЛЯ ЯЗЫКОВ
-// @import 'language-menu'
+  &-languages
+    & .wpml-ls-item > a
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        right: -1px
+        width: 11px
+        height: 11px
+        background: url("../images/icons/sprite.svg#arrow-down") center / cover no-repeat
+        transform: translateY(-50%)
+        @include mediaPhone
+          width: 22px
+          height: 22px
+          // padding: 7px
+          // border: 1px solid $white
+
+    // submenu TEST
+    & ul a
+      color: $white
+    & li a
+      padding: 20px
+      display: flex
+      justify-content: space-between
+      transition: background-color 0.3s ease
+      @media (any-hover: hover)
+      &:hover
+        // background-color: lighten($green, 3)
+        &:last-child a
+          color: $white
+      @include mediaNotebook
+        padding: 15px 10px
+        margin-bottom: 7px
+      @include mediaPhone
+        width: 100%
+        padding: 10px 20px
+        margin-bottom: 0
+    & li.current-menu-item a
+      background-color: lighten($green, 3)
+    & li ul
+      position: absolute
+      left: 0
+      width: auto
+      background-color: lighten($green, 1)
+      z-index: 50
+      //display: none
+
+      overflow: hidden
+      max-height: 0
+      opacity: 0
+      top: 65px
+      pointer-events: none
+      transition: max-height .4s ease-out, opacity 0.3s, top 0.3s
+      @include mediaPhone
+        position: relative
+        width: 100%
+        left: 0
+    & li:hover > ul
+      max-height: 500px
+      opacity: 1
+      pointer-events: initial
+      top: 60px
+      transition: top 0.3s
+      @include mediaPhone
+        top: 0
+        background-color: lighten($green, 3)
+    & li ul li
+      width: 100%
+      border-top: 1px solid rgba(0, 0, 0, 0.2)
+      @include mediaPhone
+        border: none
+        & a
+          padding-left: 40px
