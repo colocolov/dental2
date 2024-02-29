@@ -672,11 +672,11 @@ input {
 }
 
 .hero {
-  --height: 800px;
+  --height: 850px;
   position: relative;
   height: 100vh;
   min-height: var(--height);
-  background: #f7f7f7 url("../images/bg/hero.jpg") center/cover no-repeat;
+  background: #f7f7f7 url("../images/index/bg-hero.jpg") center/cover no-repeat;
   overflow: hidden;
 }
 .hero::before {
@@ -686,7 +686,8 @@ input {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #002535 0%, transparent 100%) #003851;
+  background: linear-gradient(90deg, #000 0%, transparent 100%) #000;
+  opacity: 0.3;
   z-index: 1;
 }
 @media screen and (max-width: 767.98px) {
@@ -703,7 +704,7 @@ input {
   height: var(--height);
   width: 100%;
   filter: blur(0px);
-  background: url("../images/bg/hero.jpg") no-repeat center/cover;
+  background: url("../images/index/bg-hero.jpg") no-repeat center/cover;
 }
 .hero__video {
   min-width: 100%;
@@ -719,6 +720,12 @@ input {
   height: 100%;
   flex-direction: column;
   z-index: 2;
+}
+.hero__title {
+  color: #f7f7f7;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.1;
 }
 
 .contacts__mes {
