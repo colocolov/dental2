@@ -1975,6 +1975,22 @@ input {
 
 .footer {
   background-color: #33414E;
-  padding: 60px 0;
+  padding: 40px 0 80px;
   color: #f7f7f7;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__part {
+  min-width: 226px;
+}
+.footer__head {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 19px;
 }

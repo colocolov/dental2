@@ -1,5 +1,26 @@
 .footer
   background-color: $black
-  padding: 60px 0
+  padding: 40px 0 80px
   color: $white
 
+  // .footer__container
+  &__container
+    display: flex
+    justify-content: space-between
+
+  // .footer__part
+  &__part
+    min-width: 226px
+
+  // .footer__head
+  &__head
+    @include font(700, 20, 24)
+    margin-bottom: 35px
+
+  // .footer__list
+  &__list
+
+  // .footer__item
+  &__item
+    &:not(:last-child)
+      margin-bottom: 19px
