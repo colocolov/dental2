@@ -70,6 +70,17 @@ input
 
 .heading
   @extend %head
+  color: $green
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    right: 0
+    width: 49.21875% // 630/1280
+    height: 1px
+    background-color: $green
+    transform: translateY(-50%)
 
 .unvisible
   position: absolute

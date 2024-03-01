@@ -6,17 +6,30 @@
   outline: none
 
 .btn
+  position: relative
   // align-self: center // если кнпка находится во flex-контейнере и нужно выровнять ее по середине
   display: inline-block
   background: $bgc
-  border-radius: 20px
-  // border: 2px solid $green
-  padding: 10px 32px
-  color: $white
-  @include font(700, 16, 2)
+  // border-radius: 20px
+  border: 1px solid $green
+  padding: 15px 35px
+  color: $black
+  @include font(700, 16, 20)
   text-align: center
   text-transform: uppercase
-  transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.5s ease-in-out, border-color 0.3s ease-in
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    height: 100%
+    border: 1px solid $grey
+    transform: translate(-50%, -50%)
+    // opacity: .5
+    z-index: -1
+    transition: all 0.7s ease-in-out
   &:focus
     outline: none
     // background: $gradient-dark
@@ -27,9 +40,35 @@
     // color: $white
   @media (any-hover: hover)
     &:hover
-      transform: translateY(-4px)
-      background-color: transparent
-      color: $white
+      // transform: translateY(-4px)
+      background: $green-light
+      color: $green
+      border-color: $grey
+      &::before
+        z-index: 1
+        opacity: 0
+        width: 120%
+        height: 150%
+
+  &--services
+    text-align: center
+
+
+  &__link-more
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 7px
+      right: -26px
+      width: 16px
+      height: 5px
+      background: url("../images/icons/sprite.svg#arrow-more") center / cover no-repeat
+      transition: right 0.3s ease-out
+    @media (any-hover: hover)
+      &:hover
+        &::before
+          right: -31px
 
 
 // стрелки слайдера

@@ -1,0 +1,43 @@
+.services
+  padding-top: 80px
+  padding-bottom: 80px
+  &__container
+  &__head
+    margin-bottom: 40px
+  &__wrap
+    display: flex
+    gap: 20px
+    margin-bottom: 80px
+  &__item
+    flex: 1 1 50%
+    @media (any-hover: hover)
+      &:hover
+        & .services__img img
+          transform: scale(1.02)
+        & .services__content
+          border-color: $green
+  &__img
+    // height: 200px
+    padding-bottom: 31.746032% // 200/630
+    overflow: hidden
+    img
+      transition: transform 1s ease-in-out
+  &__content
+    position: relative
+    border: 1px solid $grey
+    padding: 50px 20px 30px
+    margin-right: 10px
+    margin-left: 10px
+    margin-top: -30px
+    z-index: 1
+    transition: border-color 0.3s ease-in
+  &__title
+    margin-bottom: 20px
+    text-transform: uppercase
+    @include font(700, 20, 24)
+  &__text
+    height: 106px
+  &__link
+  &__btn
+    text-align: center
+

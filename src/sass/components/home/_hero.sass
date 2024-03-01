@@ -82,7 +82,7 @@
             left: 95%
             // right: 0
             z-index: 3
-        & .hero__link-more::before
+        & .hero__link::before
           right: 90px
           background: url("../images/icons/sprite.svg#arrow-more-white") center / cover no-repeat
   &__arrow
@@ -103,7 +103,7 @@
   &__text
     position: relative
     width: 100%
-    background-color: #E4F2F5
+    background-color: $green-light
     display: flex
     flex-direction: column
     //align-items: center
@@ -127,14 +127,5 @@
     margin-bottom: 5px
   &__link
     text-align: center
-    &-more
-      position: relative
-      &::before
-        content: ''
-        position: absolute
-        top: 7px
-        right: 100px
-        width: 16px
-        height: 5px
-        background: url("../images/icons/sprite.svg#arrow-more") center / cover no-repeat
-        transition: right 0.3s ease-out
+    &::before
+      right: 100px
