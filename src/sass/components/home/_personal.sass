@@ -1,0 +1,78 @@
+.personal
+  padding-top: 80px
+  padding-bottom: 80px
+  // .personal__container
+  &__container
+    &-swiper
+      padding: 40px 15px
+      height: 100%
+  // .personal__head  
+  &__head
+    margin-bottom: 40px
+  // .personal__slider
+  &__slider
+    position: relative
+    margin-bottom: 80px
+    // .personal__slider-wrap
+    &-wrap
+  // .personal__slide
+  &__slide
+    height: 700px
+    position: relative
+    box-sizing: border-box
+  // .personal__img
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(90deg, #33414e 0%, rgba(51, 65, 78, 0) 92.9%)
+      opacity: 0.3
+      z-index: 1
+  // .personal__info
+  &__info
+    position: relative
+    z-index: 2
+    color: $white
+    padding: 44px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    max-width: 400px
+    border: 1px solid $green-light
+    height: 100%
+  // .personal__name
+  &__name
+    @include font(700, 30, 37)
+    text-align: center
+  // .personal__post
+  &__post
+    @include font(400, 20, 24)
+    margin-bottom: 40px
+    text-align: center
+  // .personal__text
+  &__text
+    text-align: center
+  // .personal__navigation
+  &__navigation
+    position: absolute
+    top: 50%
+    right: 50%
+    z-index: 1
+    transform: translate(639px, -50%)
+    @media screen and (max-width: 1310px)
+      right: 0
+      transform: translate(-20px, -50%)
+
+  // .personal__btn
+  &__btn
+    text-align: center

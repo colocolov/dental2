@@ -2,8 +2,8 @@
 import vars from "./_vars.js";
 
 // мои модули
-import "./modules/nav.js";
-import "./modules/main-slider.js";
+//import "./modules/nav.js";
+import "./modules/personal-slider.js";
 
 //import * as navMenu from "./modules/nav.js";
 //import * as navMenu from "./modules/accordeon.js";
