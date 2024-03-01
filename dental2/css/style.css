@@ -77,6 +77,13 @@ a:hover {
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Forum";
+  src: url("../fonts/Forum-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 :root {
   --widthscrollbar: 17px;
 }
@@ -684,9 +691,9 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background: linear-gradient(90deg, #000 0%, transparent 100%) #000;
+  background-image: linear-gradient(90deg, #000000 0%, transparent);
   opacity: 0.3;
   z-index: 1;
 }
@@ -714,18 +721,125 @@ input {
   object-fit: cover;
 }
 .hero__container {
-  position: relative;
   display: flex;
   justify-content: center;
   height: 100%;
   flex-direction: column;
   z-index: 2;
 }
-.hero__title {
-  color: #f7f7f7;
+.hero__head {
+  font-family: "Forum", serif;
   font-weight: 400;
   font-size: 50px;
   line-height: 1.1;
+  color: #f7f7f7;
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.hero__head span {
+  align-self: center;
+  display: block;
+}
+.hero__sticks {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.hero__sticker {
+  max-width: 380px;
+  height: 116px;
+  display: flex;
+}
+.hero__sticker:not(:last-child) {
+  margin-bottom: 10px;
+}
+@media (any-hover: hover) {
+  .hero__sticker:hover {
+    position: relative;
+  }
+  .hero__sticker:hover .hero__text {
+    color: #f7f7f7;
+  }
+  .hero__sticker:hover .hero__text::before {
+    width: 100%;
+  }
+  .hero__sticker:hover .hero__arrow {
+    position: unset;
+  }
+  .hero__sticker:hover .hero__arrow::before {
+    left: 95%;
+    z-index: 3;
+  }
+  .hero__sticker:hover .hero__link-more::before {
+    right: 90px;
+    background: url("../images/icons/sprite.svg#arrow-more-white") center/cover no-repeat;
+  }
+}
+.hero__arrow {
+  position: relative;
+  width: 40px;
+  background-color: #33414E;
+  flex-shrink: 0;
+}
+.hero__arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: url("../images/icons/sprite.svg#arrow-right") center/cover no-repeat;
+  transform: translate(-50%, -50%);
+  transition: left 0.3s ease-in;
+}
+.hero__text {
+  position: relative;
+  width: 100%;
+  background-color: #E4F2F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px 0;
+  z-index: 2;
+}
+.hero__text p {
+  padding: 0 30px;
+}
+.hero__text::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: #33414E;
+  height: 100%;
+  width: 0%;
+  z-index: -1;
+  transition: all 0.3s ease-out;
+}
+.hero__title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.hero__link {
+  text-align: center;
+}
+.hero__link-more {
+  position: relative;
+}
+.hero__link-more::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 100px;
+  width: 16px;
+  height: 5px;
+  background: url("../images/icons/sprite.svg#arrow-more") center/cover no-repeat;
+  transition: right 0.3s ease-out;
 }
 
 .contacts__mes {
