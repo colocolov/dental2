@@ -3,6 +3,8 @@ import vars from "./_vars.js";
 
 // мои модули
 //import "./modules/nav.js";
+
+import "./modules/heroImgUrl.js";
 import "./modules/personal-slider.js";
 
 //import * as navMenu from "./modules/nav.js";
