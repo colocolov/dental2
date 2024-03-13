@@ -1761,6 +1761,7 @@ input {
 
 .services {
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 .services__head {
   margin-bottom: 40px;
@@ -1811,10 +1812,28 @@ input {
 .services__btn {
   text-align: center;
 }
-
-.personal {
-  padding-top: 80px;
+.services--dark {
+  background-color: #4d8399;
+  color: #f7f7f7;
 }
+.services--dark .services__item:hover .services__content {
+  border-color: #33414E;
+}
+.services--dark .services__head {
+  color: #f7f7f7;
+}
+.services--dark .services__head::before {
+  background-color: #f7f7f7;
+}
+.services--dark .services__link::before {
+  background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat;
+}
+.services--dark .btn {
+  background-color: transparent;
+  color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+}
+
 .personal__container-swiper {
   padding: 40px 15px;
   height: 100%;

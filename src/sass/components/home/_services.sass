@@ -1,5 +1,6 @@
 .services
   padding-top: 80px
+  padding-bottom: 80px
   &__container
   &__head
     margin-bottom: 40px
@@ -39,4 +40,22 @@
   &__link
   &__btn
     text-align: center
+
+  &--dark
+    background-color: $green
+    color: $white
+    & .services__item:hover .services__content
+      border-color: $black
+    & .services__head
+      color: $white
+      &::before
+        background-color: $white
+    & .services__link
+      &::before
+        background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat
+    & .btn
+      background-color: transparent
+      color: $white
+      border: 1px solid $white
+
 
