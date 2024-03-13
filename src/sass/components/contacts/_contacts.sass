@@ -1,28 +1,103 @@
-.contacts
+.contact
 
-  &__mes
-    color: $black
-    margin-right: 35px
-    width: 45.588235% // 620/1360
-  &__top
-    display: flex
-    justify-content: space-between
-    width: 100%
-    gap: 40px
+  &-top
+    background-color: #EFEFED
+    padding-top: 80px
+
+    // .contact-top__container
+    &__container
+
+    // .contact-top__head
+    &__head
+      color: $black
+      margin-bottom: 40px
+      &::before
+        background-color: $green
+
+    // .contact-top__info
+    &__info
+      max-width: 750px
+      margin: 0 auto
+
+    // .contact-top__text
+    &__text
+      margin-bottom: 20px
+      @include font(600, 20, 24)
+      max-width: 400px
+
+    // .contact-top__item
+    &__item
+      border-bottom: 1px solid $green
+      padding-top: 20px
+      padding-bottom: 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      color: $black
+      &:not(:last-child)
+        margin-bottom: 20px
+
+    // .contact-top__name
+    &__name
+
+    // .contact-top__lik
+    &__link
+      font-weight: 700
+
+
+  &-bottom
+    background-color: #EFEFED
+    padding-top: 80px
+    padding-bottom: 80px
+
+    &__wrap
+      max-width: 750px
+      margin: 0 auto
+
+    &__text
+      margin-bottom: 20px
+      @include font(600, 20, 24)
+      max-width: 400px
+
+
+
+  &__form
+    border: 1px solid $green
+    margin-bottom: 40px
   &__line
-    border-bottom: 1px solid $black
-    flex: 1 1 48%
-    height: 34px
+    border-bottom: 1px solid $green
+    height: 60px
+    display: flex
+    align-items: flex-end
   &__input
+    padding: 10px
     background-color: transparent
-    height: 34px
+    height: 100%
     width: 100%
+    transition: border 0.3s ease-in
     &::placeholder
       // font-family: 'Montserrat'
       color: rgba($black, 0.6)
       transition: color 0.3s ease
-      &:focus
-        border: 1px solid $black
+    &:focus
+      border: 1px solid $green
+
+  &__text
+    height: 200px
+  &__textarea
+    color: rgba($black, 0.6)
+    width: 100%
+    height: 100%
+    padding: 10px
+    background-color: transparent
+    transition: border 0.3s ease-in
+    outline: none
+    resize: none
+    &::placeholder
+      transform: translateY(157px)
+    &:focus
+      border: 1px solid $green
+
 
 
 

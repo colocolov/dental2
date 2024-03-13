@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="page">
+<html lang="ru" class="page">
 @include('html/head.html', { "title":"Contacts" })
 
 <body class="page__body">
@@ -7,7 +7,8 @@
     @include('html/header.html')
 
     <main class="main">
-      @include('html/contacts/_form.html')
+      @include('html/contacts/form-top.html')
+      @include('html/contacts/form-bottom.html')
     </main>
 
     @include('html/footer.html')
