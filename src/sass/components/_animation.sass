@@ -1,11 +1,11 @@
 @media ( min-width: 992px )
-  .benefits__arrow
-            // имя  / продолжительность / ?? / ?? / время задерржки 
-    animation: move-down 5s infinite linear
-    // снимает дергание анимации
-    backface-visibility: hidden
-    // сохраняет перввй кадр анимации, если еть задержка
-    animation-fill-mode: backwards
+//.benefits__arrow
+  // имя  / продолжительность / ?? / ?? / время задерржки 
+  //animation: move-down 5s infinite linear
+  // снимает дергание анимации
+  //backface-visibility: hidden
+  // сохраняет перввй кадр анимации, если еть задержка
+  //animation-fill-mode: backwards
 
 
 @keyframes move-down
@@ -32,8 +32,10 @@
 
 
 ////import css-variables from 
-  @keyframes tipUp
-    0%    transform: translateY(50px) rotateZ(45deg)
-    100%    transform: translateY(-70px) rotateZ(45deg)
+@keyframes tipUp
+  0%
+    transform: translateY(-10px)
+  100%
+    transform: translateY(40px)
 
-  //animation: tipUp $speed cubic-bezier(0.0, 0.6, 1.0, 0.4) infinite .5s
+  //animation: tipUp 3s cubic-bezier(0.0, 0.6, 1.0, 0.4) infinite .5s
