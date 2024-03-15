@@ -961,7 +961,7 @@ a:hover {
   margin: 0;
   min-width: 320px;
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #EFEFED;
   color: rgba(0, 0, 0, 0.7);
 }
 .page__body._lock {
@@ -1002,6 +1002,12 @@ input {
   max-width: 1310px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+[class*=__hide] {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 ._ibg {
@@ -1472,7 +1478,7 @@ input {
 .btn {
   position: relative;
   display: inline-block;
-  background: #FFFFFF;
+  background: transparent;
   border: 1px solid #4d8399;
   padding: 15px 35px;
   color: #33414E;
@@ -1516,6 +1522,7 @@ input {
 }
 .btn--services {
   text-align: center;
+  margin-top: 80px;
 }
 .btn--about {
   background-color: #4d8399;
@@ -1526,12 +1533,11 @@ input {
   color: #f7f7f7;
 }
 .btn--send {
-  background-color: transparent;
   color: #33414E;
   border: 1px solid #4d8399;
   cursor: pointer;
 }
-.btn_down--svg {
+.btn_down {
   width: 30px;
   height: 30px;
   margin: 0 auto;
@@ -1544,10 +1550,16 @@ input {
   backface-visibility: hidden;
   animation-fill-mode: backwards;
 }
-.btn_down--svg svg {
+.btn_down svg {
   width: 16px;
   height: 16px;
   fill: #f7f7f7;
+}
+.btn_down--found svg {
+  fill: #33414E;
+}
+.btn_down--serv {
+  border: 1px solid #f7f7f7;
 }
 .btn__link-more {
   position: relative;
@@ -1774,11 +1786,13 @@ input {
 }
 .services__wrap {
   display: flex;
-  gap: 20px;
-  margin-bottom: 80px;
+  row-gap: 80px;
+  column-gap: 20px;
+  flex-wrap: wrap;
 }
 .services__item {
-  flex: 1 1 50%;
+  flex: 1 1 49%;
+  max-width: 49%;
 }
 @media (any-hover: hover) {
   .services__item:hover .services__img img {
@@ -2011,11 +2025,6 @@ input {
   background-color: #D3DEE1;
   position: relative;
 }
-.hero-found__hide {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-}
 .hero-found__img {
   position: absolute;
   top: 0;
@@ -2088,6 +2097,43 @@ input {
 }
 .steps__btn {
   text-align: center;
+}
+
+.hero-serv {
+  padding-top: 80px;
+}
+.hero-serv__container {
+  position: relative;
+}
+.hero-serv__img {
+  position: relative;
+  padding-bottom: 49.21875%;
+}
+.hero-serv__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.hero-serv__img img {
+  object-fit: cover;
+  width: 100%;
+}
+.hero-serv__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.hero-serv__head {
+  font-family: "Forum";
+  font-size: 50px;
+  color: #f7f7f7;
 }
 
 .contact-top {

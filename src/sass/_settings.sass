@@ -19,7 +19,7 @@
   min-width: 320px
   height: 100%
   @extend %body
-  background-color: $bgc
+  background-color: #EFEFED
   color: $text
   &._lock
     overflow: hidden !important
@@ -54,6 +54,9 @@ input
   max-width: $containerWidth + px
   margin: 0 auto
   padding: 0 $containerPadding + px
+
+[class*='__hide']
+  @include hide
 
 ._ibg
   position: relative
