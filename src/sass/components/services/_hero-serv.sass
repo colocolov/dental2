@@ -1,14 +1,30 @@
 .hero-serv
   padding-top: 80px
 
+  &--single
+    .hero-serv__container
+    .hero-serv__img::before
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%)
+    .hero-serv__content
+      padding: 60px
+      width: 100%
+      justify-content: space-between
+      align-items: unset
+      // height: 100%
+    .hero-serv__head
+      text-transform: uppercase
+
   // .hero-found__container
   &__container
     position: relative
 
   // .hero-found__img
   &__img
-    position: relative
-    padding-bottom: 49.21875% // 630/1280
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    padding-bottom: 48.091603% // 630/1310
     &::before
       content: ''
       position: absolute
@@ -24,10 +40,12 @@
 
   // .hero-found__content
   &__content
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+    height: 630px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
     z-index: 2
 
 
@@ -36,4 +54,12 @@
     font-family: 'Forum'
     font-size: 50px
     color: $white
+
+  &__text
+    max-width: 732px
+    margin-left: auto
+    @include font(600, 20, 24)
+    color: $white
+    p:not(:last-child)
+      margin-bottom: 7px
 

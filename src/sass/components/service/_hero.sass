@@ -1,0 +1,39 @@
+.hero-serv
+  padding-top: 80px
+
+  // .hero-found__container
+  &__container
+    position: relative
+
+  // .hero-found__img
+  &__img
+    position: relative
+    padding-bottom: 49.21875% // 630/1280
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(#000000, 0.3)
+      z-index: 1
+    img
+      object-fit: cover
+      width: 100%
+
+  // .hero-found__content
+  &__content
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 2
+
+
+  // .hero-found__head
+  &__head
+    font-family: 'Forum'
+    font-size: 50px
+    color: $white
+

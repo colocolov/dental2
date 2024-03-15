@@ -1957,6 +1957,26 @@ input {
 .about--dark {
   background-color: #4d8399;
 }
+.about--single .about__img::before {
+  content: none;
+}
+.about--single .about__container-serv {
+  padding-bottom: 175px;
+}
+.about--single .about__content {
+  height: 100%;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+}
+.about--single .about__text {
+  color: #33414E;
+  margin-bottom: 0;
+}
+.about--single .btn--about {
+  margin-left: auto;
+  margin-top: -21px;
+}
 .about__container-content {
   position: relative;
   z-index: 1;
@@ -2018,6 +2038,20 @@ input {
   color: #f7f7f7;
   border: 1px solid #f7f7f7;
   padding: 44px 60px 44px 20px;
+}
+.about__title {
+  font-family: Forum;
+  font-size: 50px;
+  line-height: 0.85;
+  color: #33414E;
+  max-width: 420px;
+  margin-left: auto;
+}
+.about__group {
+  max-width: 332px;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 .about__text {
   margin-bottom: 20px;
@@ -2132,17 +2166,33 @@ input {
 }
 .steps__btn {
   text-align: center;
+  color: #f7f7f7;
 }
 
 .hero-serv {
   padding-top: 80px;
 }
+.hero-serv--single .hero-serv__img::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+.hero-serv--single .hero-serv__content {
+  padding: 60px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: unset;
+}
+.hero-serv--single .hero-serv__head {
+  text-transform: uppercase;
+}
 .hero-serv__container {
   position: relative;
 }
 .hero-serv__img {
-  position: relative;
-  padding-bottom: 49.21875%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 48.091603%;
 }
 .hero-serv__img::before {
   content: "";
@@ -2159,16 +2209,29 @@ input {
   width: 100%;
 }
 .hero-serv__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 630px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   z-index: 2;
 }
 .hero-serv__head {
   font-family: "Forum";
   font-size: 50px;
   color: #f7f7f7;
+}
+.hero-serv__text {
+  max-width: 732px;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #f7f7f7;
+}
+.hero-serv__text p:not(:last-child) {
+  margin-bottom: 7px;
 }
 
 .contact-top {

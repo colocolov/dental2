@@ -2,6 +2,23 @@
   padding-top: 80px
   &--dark
     background-color: $green
+  &--single
+    .about__img::before
+      content: none
+    .about__container-serv
+      padding-bottom: 175px
+    .about__content
+      height: 100%
+      padding: 60px 0
+      display: flex
+      flex-direction: column
+    .about__text
+      color: $black
+      margin-bottom: 0
+    .btn--about
+      margin-left: auto
+      // transform: translateY(-21px)
+      margin-top: -21px
 
   // .about__container
   &__container
@@ -79,6 +96,21 @@
     color: $white
     border: 1px solid $white
     padding: 44px 60px 44px 20px
+
+  &__title
+    font-family: Forum
+    font-size: 50px
+    line-height: 0.85
+    color: $black
+    max-width: 420px
+    margin-left: auto
+    // margin-bottom: 40px
+
+  &__group
+    max-width: 332px
+    margin-right: auto
+    display: flex
+    flex-direction: column
 
   // .about__text
   &__text
