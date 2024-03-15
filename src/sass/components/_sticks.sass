@@ -1,0 +1,72 @@
+.sticks
+  display: flex
+  flex-direction: column
+  position: absolute
+  top: 50%
+  right: 0
+  transform: translateY(-50%)
+  &__item
+    max-width: 380px
+    height: 116px
+    display: flex
+    &:not(:last-child)
+      margin-bottom: 10px
+    @media (any-hover: hover)
+      &:hover
+        position: relative
+        & .sticks__text
+          color: $white
+          &::before
+            width: 100%
+        & .sticks__arrow
+          position: unset
+          &::before
+            left: 95%
+            // right: 0
+            z-index: 3
+        & .sticks__link::before
+          content: none
+  &__arrow
+    position: relative
+    width: 40px
+    background-color: $black
+    flex-shrink: 0
+    &::before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 24px
+      height: 24px
+      background: url("../images/icons/sprite.svg#arrow-right") center / cover no-repeat
+      transform: translate(-50%, -50%)
+      transition: left 0.3s ease-in
+  &__text
+    position: relative
+    width: 100%
+    background-color: $green-light
+    display: flex
+    flex-direction: column
+    //align-items: center
+    justify-content: center
+    padding: 15px 0
+    z-index: 2
+    p
+      padding: 0 30px
+    &::before
+      position: absolute
+      content: ''
+      display: block
+      background-color: $black
+      height: 100%
+      width: 0%
+      z-index: -1
+      transition: all 0.3s ease-out
+  &__title
+    font-size: 20px
+    text-align: center
+    margin-bottom: 5px
+  &__link
+    text-align: center
+    &::before
+      right: 100px

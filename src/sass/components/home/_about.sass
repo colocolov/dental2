@@ -1,32 +1,42 @@
 .about
   padding-top: 80px
+  &--dark
+    background-color: $green
 
   // .about__container
   &__container
     &-content
       position: relative
       z-index: 1
-      height: 100%
+      height: 500px
       display: flex
       align-items: center
+    &-serv
+      margin-top: 20px
+      padding-bottom: 20px
+
 
   // .about__head
   &__head
     margin-bottom: 40px
+    &--light
+      color: $white
+      margin-bottom: 70px
+      &::before
+        background-color: $white
 
   // .about__wrap
   &__wrap
-    height: 500px
     position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%)
-      z-index: 1
+    // &::before
+    //   content: ''
+    //   position: absolute
+    //   top: 0
+    //   left: 0
+    //   width: 100%
+    //   height: 100%
+    //   background: linear-gradient(90deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%)
+    //   z-index: 1
 
   // .about__img
   &__img
@@ -35,6 +45,7 @@
     left: 0
     width: 100%
     height: 100%
+    height: 500px
     &::before
       content: ''
       position: absolute
@@ -42,7 +53,7 @@
       left: 0
       width: 100%
       height: 100%
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%)
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 100%)
       opacity: 0.3
       z-index: 1
     img
@@ -79,4 +90,29 @@
   &__link
     &::before
       background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat
+
+  // .about__sticks
+  &__sticks
+    display: flex
+    position: relative
+    top: unset
+    right: unset
+    transform: unset
+    flex-direction: row
+    justify-content: flex-end
+    &.show
+      .sticks__text
+        width: 100%
+        opacity: 1
+      .sticks__item
+    .sticks__text
+      width: 0
+      opacity: 0
+      transition: all 0.3s ease-in
+    .sticks__item
+      max-width: unset
+      width: 700px
+      justify-content: flex-end
+    .sticks__title
+      margin-bottom: 30px
 

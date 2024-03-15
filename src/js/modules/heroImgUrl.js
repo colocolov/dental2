@@ -1,2 +1,7 @@
 const heroSec = document.querySelector('.hero');
-document.documentElement.style.setProperty('--imgUrlHero', `url('${heroSec.dataset.url}')` );
+if (heroSec) {
+
+  console.log(heroSec);
+  document.documentElement.style.setProperty('--imgUrlHero', `url('${heroSec.dataset.url}')` );
+  
+}
