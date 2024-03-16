@@ -1,0 +1,57 @@
+.main-serv
+  padding-top: 80px
+  padding-bottom: 80px
+
+  // .main-serv__container
+  &__container
+
+  // .main-serv__wrap
+  &__wrap
+    display: flex
+    // flex-wrap: wrap
+    flex-flow: column wrap
+    align-content: space-between
+    row-gap: 80px
+    column-gap: 20px
+    height: 1360px
+    // Your container needs a fixed height, and it 
+    // needs to be taller than your tallest column.
+
+
+  // .main-serv__item
+  &__item
+    width: 49%
+    &--bt
+      padding-top: 40px
+      border-top: 1px solid $black
+    &:last-child
+      text-align: center
+      margin-top: 40px
+
+
+  // .main-serv__img
+  &__img
+    padding-bottom: 55.555556% // 350/630
+    margin-bottom: 40px
+
+  &__sticks
+    .sticks__text
+      background-color: $green
+      color: $white
+    .sticks__link::before
+      background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat
+
+
+  // .main-serv__info
+  &__info
+    padding: 40px 20px
+    border: 1px solid $black
+
+  // .main-serv__title
+  &__title
+    @include font(600, 30, 37)
+    color: $black
+    margin-bottom: 10px
+
+  // .main-serv__text
+  &__text

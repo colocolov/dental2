@@ -5,6 +5,30 @@
   top: 50%
   right: 0
   transform: translateY(-50%)
+  &--hide
+    display: flex
+    position: relative
+    top: unset
+    right: unset
+    transform: unset
+    flex-direction: row
+    justify-content: flex-end
+    &.show
+      .sticks__text
+        width: 100%
+        opacity: 1
+      .sticks__item
+    .sticks__text
+      width: 0
+      opacity: 0
+      transition: all 0.3s ease-in
+    .sticks__item
+      max-width: unset
+      width: 700px
+      justify-content: flex-end
+    .sticks__title
+      margin-bottom: 30px
+
   &__item
     max-width: 380px
     height: 116px

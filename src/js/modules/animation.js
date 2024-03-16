@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const hiddenElement = document.querySelector('.about__sticks');
+const hiddenElement = document.querySelector('.sticks--hide');
 // console.log(hiddenElemet);
 
 observer.observe(hiddenElement);

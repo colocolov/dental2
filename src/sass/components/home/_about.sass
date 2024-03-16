@@ -117,34 +117,7 @@
     margin-bottom: 20px
     @include font(500, 20, 24)
 
-
   // .about__link
   &__link
     &::before
       background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat
-
-  // .about__sticks
-  &__sticks
-    display: flex
-    position: relative
-    top: unset
-    right: unset
-    transform: unset
-    flex-direction: row
-    justify-content: flex-end
-    &.show
-      .sticks__text
-        width: 100%
-        opacity: 1
-      .sticks__item
-    .sticks__text
-      width: 0
-      opacity: 0
-      transition: all 0.3s ease-in
-    .sticks__item
-      max-width: unset
-      width: 700px
-      justify-content: flex-end
-    .sticks__title
-      margin-bottom: 30px
-

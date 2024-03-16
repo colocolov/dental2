@@ -1475,6 +1475,32 @@ input {
   right: 0;
   transform: translateY(-50%);
 }
+.sticks--hide {
+  display: flex;
+  position: relative;
+  top: unset;
+  right: unset;
+  transform: unset;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.sticks--hide.show .sticks__text {
+  width: 100%;
+  opacity: 1;
+}
+.sticks--hide .sticks__text {
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+.sticks--hide .sticks__item {
+  max-width: unset;
+  width: 700px;
+  justify-content: flex-end;
+}
+.sticks--hide .sticks__title {
+  margin-bottom: 30px;
+}
 .sticks__item {
   max-width: 380px;
   height: 116px;
@@ -1625,6 +1651,9 @@ input {
   color: #33414E;
   border: 1px solid #4d8399;
   cursor: pointer;
+}
+.btn--service {
+  text-align: center;
 }
 .btn_down {
   width: 30px;
@@ -2062,32 +2091,6 @@ input {
 .about__link::before {
   background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat;
 }
-.about__sticks {
-  display: flex;
-  position: relative;
-  top: unset;
-  right: unset;
-  transform: unset;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.about__sticks.show .sticks__text {
-  width: 100%;
-  opacity: 1;
-}
-.about__sticks .sticks__text {
-  width: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in;
-}
-.about__sticks .sticks__item {
-  max-width: unset;
-  width: 700px;
-  justify-content: flex-end;
-}
-.about__sticks .sticks__title {
-  margin-bottom: 30px;
-}
 
 .hero-found {
   height: 710px;
@@ -2234,6 +2237,51 @@ input {
   margin-bottom: 7px;
 }
 
+.main-serv {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.main-serv__wrap {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  row-gap: 80px;
+  column-gap: 20px;
+  height: 1360px;
+}
+.main-serv__item {
+  width: 49%;
+}
+.main-serv__item--bt {
+  padding-top: 40px;
+  border-top: 1px solid #33414E;
+}
+.main-serv__item:last-child {
+  text-align: center;
+  margin-top: 40px;
+}
+.main-serv__img {
+  padding-bottom: 55.555556%;
+  margin-bottom: 40px;
+}
+.main-serv__sticks .sticks__text {
+  background-color: #4d8399;
+  color: #f7f7f7;
+}
+.main-serv__sticks .sticks__link::before {
+  background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat;
+}
+.main-serv__info {
+  padding: 40px 20px;
+  border: 1px solid #33414E;
+}
+.main-serv__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.2333333333;
+  color: #33414E;
+  margin-bottom: 10px;
+}
 .contact-top {
   background-color: #EFEFED;
   padding-top: 80px;
