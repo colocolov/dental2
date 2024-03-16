@@ -1679,6 +1679,12 @@ input {
 .btn_down--serv {
   border: 1px solid #f7f7f7;
 }
+.btn_down--hero-adv {
+  border: 1px solid transparent;
+}
+.btn_down--hero-adv svg {
+  fill: #33414E;
+}
 .btn__link-more {
   position: relative;
 }
@@ -2282,6 +2288,128 @@ input {
   color: #33414E;
   margin-bottom: 10px;
 }
+.hero-adv__container--wide {
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.hero-adv__item {
+  width: 33.33%;
+  height: 400px;
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-adv__text {
+  padding: 80px;
+  text-align: center;
+  font-size: 20px;
+}
+.hero-adv__text span {
+  font-weight: 700;
+  display: block;
+  font-size: 50px;
+}
+.hero-adv__img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.team {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.team__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 20px;
+}
+.team__item {
+  width: 49%;
+  position: relative;
+  height: 400px;
+  display: flex;
+}
+@media (any-hover: hover) {
+  .team__item:hover .team__info {
+    color: #f7f7f7;
+  }
+  .team__item:hover .team__info::before {
+    width: 100%;
+  }
+  .team__item:hover .team__img img {
+    transform: scale(1.015);
+  }
+}
+.team__item--wide {
+  width: 96.666667%;
+  flex-direction: row-reverse;
+}
+.team__item--wide .team__img {
+  position: relative;
+  width: 630px;
+  padding-bottom: 31.25%;
+}
+.team__item--wide .team__info {
+  align-self: center;
+  width: 610px;
+  margin-right: -50px;
+  background: transparent;
+  border: 1px solid #D3DEE1;
+  transition: border 0.3s ease-in;
+}
+.team__item--wide .team__info::before {
+  content: none;
+}
+@media (any-hover: hover) {
+  .team__item--wide:hover .team__info {
+    color: #33414E;
+    border: 1px solid #4d8399;
+  }
+}
+.team__info {
+  width: 250px;
+  padding: 38px 20px;
+  background: linear-gradient(133deg, rgb(228, 242, 245) 0%, rgba(197, 228, 223, 0.7) 100%);
+  z-index: 1;
+  position: relative;
+  align-self: flex-end;
+  transition: color 0.3s ease-out;
+}
+.team__info::before {
+  transition: all 0.3s ease-in;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #4d8399;
+  z-index: -1;
+}
+.team__name {
+  font-weight: 700;
+  font-size: 20px;
+}
+.team__img {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 63.492063%;
+  overflow: hidden;
+}
+.team__img img {
+  transition: transform 0.5s ease-in;
+}
+
 .contact-top {
   background-color: #EFEFED;
   padding-top: 80px;
