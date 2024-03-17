@@ -6,7 +6,8 @@ import vars from "./_vars.js";
 
 import "./modules/heroImgUrl.js";
 import "./modules/personal-slider.js";
-import "./modules/animation.js";
+import "./modules/sticks.js";
+import "./modules/animateNumber.js";
 
 //import * as navMenu from "./modules/nav.js";
 //import * as navMenu from "./modules/accordeon.js";

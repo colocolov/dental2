@@ -15,7 +15,9 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElement = document.querySelector('.sticks--hide');
 // console.log(hiddenElemet);
 
-observer.observe(hiddenElement);
+if (hiddenElement) {
+  observer.observe(hiddenElement);
+}
 
 
 // для множества элементов
