@@ -7,10 +7,17 @@
   &__container
     display: flex
     justify-content: space-between
+    @include mediaPhone
+      flex-direction: column
+      row-gap: 20px
+
 
   // .footer__part
   &__part
     min-width: 226px
+    @include mediaPhone
+      border-bottom: 1px solid $white
+      padding-bottom: 10px
 
   // .footer__head
   &__head

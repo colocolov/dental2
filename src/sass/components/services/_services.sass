@@ -10,8 +10,10 @@
     row-gap: 80px
     column-gap: 20px
     flex-wrap: wrap
+    @include mediaPhone
+      row-gap: 40px
   &__item
-    flex: 1 1 49%
+    flex: 1 1 48%
     max-width: 49%
     @media (any-hover: hover)
       &:hover
@@ -19,9 +21,12 @@
           transform: scale(1.02)
         & .services__content
           border-color: $green
+    @include mediaPhone
+      flex-basis: 100%
+      max-width: 100%
   &__img
     // height: 200px
-    padding-bottom: 31.746032% // 200/630
+    padding-bottom: 200px // 200/630
     overflow: hidden
     img
       transition: transform 1s ease-in-out

@@ -85,6 +85,13 @@
     justify-content: space-between
     color: $white
     width: 100%
+    gap: 30px
+    @include mediaPhone
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      height: 100%
+      padding: 20px
 
   // .about__info
   &__info
@@ -96,6 +103,8 @@
     color: $white
     border: 1px solid $white
     padding: 44px 60px 44px 20px
+    @include mediaPhone
+      height: auto
 
   &__title
     font-family: Forum

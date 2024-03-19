@@ -36,6 +36,9 @@
         &:hover
           svg
             fill: $green
+    @include mediaPhone
+      display: none
+
   &__phone
     transition: color 0.3s ease-in
     @media (any-hover: hover)
@@ -45,4 +48,6 @@
 
   &__menu
     margin-top: 20px
+    @include mediaPhone
+      margin-top: 0
 

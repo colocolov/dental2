@@ -84,6 +84,12 @@ input
     height: 1px
     background-color: $green
     transform: translateY(-50%)
+  @include mediaPhone
+    text-align: center
+    &::before
+      top: unset
+      bottom: -5px
+      width: 100%
 
 .unvisible
   position: absolute
