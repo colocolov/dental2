@@ -11,12 +11,14 @@
       right: -100%
       width: 100%
       height: 100%
-      padding: 150px 30px 50px 70px
-      background-color: rgba($text, 0.9) // ---------- ЦВЕТ ФОНА У МЕНЮ
+      min-height: 100vh
+      padding: 150px 20px 50px 20px
+      background-color: $black // ---------- ЦВЕТ ФОНА У МЕНЮ
       overflow: auto
       transition: right 0.5s ease 0s
       z-index: 2
-      justify-content: flex-end
+      // justify-content: flex-end
+      opacity: .98
       // подложка под верхнее меню, если оно имеет фон
       &::before
         content: ''
@@ -24,12 +26,15 @@
         top: 0
         right: -100%
         width: 100%
-        height: 74px
-        // background-color: $text
+        height: 85px
+        background-color: $black // ---------- ЦВЕТ ФОНА У ШАПКИ
         transition: right 0.5s ease 0s
         z-index: 2
     &._active
       right: 0
+      display: flex
+      flex-direction: column
+      // overflow-y: auto
       &::before
         right: 0
   &__list
@@ -39,6 +44,7 @@
       flex-direction: column
       align-items: flex-end
       justify-content: flex-start
+      order: 2
 
   &__item
     position: relative
@@ -67,7 +73,7 @@
 
     @include mediaPhone
       margin-bottom: 40px
-      font-weight: 800
+      // font-weight: 800
       font-size: 32px
       color: $white // ---------- ЦВЕТ ССЫЛОК НА МОБИЛКАХ
       &:not(:last-child)
@@ -116,6 +122,8 @@
           transition: transform .3s ease-in-out, top .3s ease-in-out
 
   &-languages
+    @include mediaPhone
+      order: 1
     & .wpml-ls-item > a
       position: relative
       &::after
@@ -189,3 +197,25 @@
         border: none
         & a
           padding-left: 40px
+
+    @include mediaPhone
+      & li
+        display: flex
+        align-items: center
+        flex-wrap: nowrap
+      & li a
+        width: auto
+        font-size: 20px
+        padding-right: 0
+        &::after
+          content: none !important
+      & li ul
+        opacity: 1
+        top: 0
+        background-color: transparent
+        max-height: unset
+        display: flex
+        z-index: 1
+      & li ul a
+        font-size: 20px
+        padding-right: 0

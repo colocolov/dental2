@@ -2,6 +2,8 @@
   background-color: $black
   padding: 40px 0 80px
   color: $white
+  @include mediaPhone
+    padding-bottom: 40px
 
   // .footer__container
   &__container
@@ -18,14 +20,44 @@
     @include mediaPhone
       border-bottom: 1px solid $white
       padding-bottom: 10px
+    @include mediaPhone
+      &.active .footer__list
+        display: block
+        max-height: 1000px !important
+        padding-top: 10px
+        padding-bottom: 10px
+      &.active .footer__head
+        margin-bottom: 10px
+        &::before
+          transform: rotate(180deg)
 
   // .footer__head
   &__head
     @include font(700, 20, 24)
     margin-bottom: 35px
+    @include mediaPhone
+      margin-bottom: 0
+      transition: margin-bottom 0.3s ease-in
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        width: 24px
+        height: 24px
+        background: url("../images/icons/sprite.svg#arrow-down-light") center / cover no-repeat
+        transition: transform 0.3s ease-in
 
   // .footer__list
   &__list
+    @include mediaPhone
+      padding: 0
+      display: none
+      transition: max-height 0.3s ease-out
+      max-height: 0
+      overflow: hidden
+      // transition: all 0.3s ease-in
 
   // .footer__item
   &__item

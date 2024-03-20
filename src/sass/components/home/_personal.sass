@@ -5,6 +5,8 @@
     &-swiper
       padding: 40px 15px
       height: 100%
+      @include mediaPhoneSm
+        padding: 20px 20px 70px 20px
   // .personal__head  
   &__head
     margin-bottom: 40px
@@ -30,6 +32,8 @@
       background: linear-gradient(90deg, rgba($black, 0.8) 0%, rgba($black, 0) 100%)
       opacity: 0.3
       z-index: 1
+    @include mediaPhone
+      height: 500px
 
   // .personal__img
   &__img
@@ -61,10 +65,19 @@
     max-width: 400px
     border: 1px solid $green-light
     height: 100%
+    @include mediaPhoneSm
+      padding: 0 8px 20px 8px
+      margin-top: 30px
+
   // .personal__name
   &__name
     @include font(700, 30, 37)
     text-align: center
+    @include mediaPhoneSm
+      margin-top: -37px
+      font-size: 24px
+    // @include mediaPhoneSm
+    //   align-self: flex-start
   // .personal__post
   &__post
     @include font(400, 20, 24)
@@ -73,6 +86,8 @@
   // .personal__text
   &__text
     text-align: center
+    @include mediaPhoneSm
+      margin-top: auto
   // .personal__navigation
   &__navigation
     position: absolute
@@ -83,7 +98,14 @@
     @media screen and (max-width: 1310px)
       right: 0
       transform: translate(-20px, -50%)
+    @include mediaPhoneSm
+      top: unset
+      bottom: 0
+      right: 50%
+      transform: translate(calc(-50% + 30px), -15%)
+
 
   // .personal__btn
   &__btn
     text-align: center
+

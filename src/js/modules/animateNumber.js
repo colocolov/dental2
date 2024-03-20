@@ -15,9 +15,11 @@ function animateNumber(element, targetNumber, duration) {
   }
 
   const numbers = document.querySelectorAll('.number');
-  numbers.forEach((number, index) => {
-    const targetNumber = parseInt(number.innerText); // Получаем конечное число из <div>
-    setTimeout(() => {
-      animateNumber(number, targetNumber, 1000); // Продолжительность анимации: 3 секунды
-    }, index * 500); // Задержка перед началом анимации каждого числа: 500 мс
-  });
+  if (numbers) {
+    numbers.forEach((number, index) => {
+      const targetNumber = parseInt(number.innerText); // Получаем конечное число из <div>
+      setTimeout(() => {
+        animateNumber(number, targetNumber, 1000); // Продолжительность анимации: 3 секунды
+      }, index * 500); // Задержка перед началом анимации каждого числа: 500 мс
+    });
+  }

@@ -38,13 +38,19 @@
     left: 0
     height: var(--height)
     width: 100%
-    filter: blur(0px)
-  &__video
-    min-width: 100%
-    min-height: 100%
-    width: auto
-    height: auto
-    object-fit: cover
+    filter: blur(2px)
+    video,
+    iframe,
+    object,
+    embed
+      background-size: cover
+      min-width: 100%
+      min-height: 100%
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: -5
+      position: fixed
 
   &__container
     // position: relative
@@ -73,6 +79,8 @@
     span
       align-self: center
       display: block
+    @include mediaPhoneMid
+      font-size: 36px
 
   &__sticks
     position: absolute
@@ -87,5 +95,7 @@
       transform: unset
     @include mediaTablet
       flex-direction: row
-      column-gap: 20px
+      flex-wrap: wrap
+      justify-content: center
+      // column-gap: 20px
 
