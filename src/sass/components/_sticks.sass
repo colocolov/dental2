@@ -8,6 +8,8 @@
     transform: unset
     flex-direction: row
     justify-content: flex-end
+    @include mediaTablet
+      justify-content: center
     &.show
       .sticks__text
         width: 100%
@@ -21,8 +23,12 @@
       max-width: unset
       width: 700px
       justify-content: flex-end
+      @include mediaTablet
+        width: auto
     .sticks__title
       margin-bottom: 30px
+      @include mediaTablet
+        margin-bottom: 0
 
   &__item
     max-width: 380px

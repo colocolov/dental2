@@ -1,5 +1,9 @@
 .hero-serv
   padding-top: 80px
+  @include mediaDesk
+    padding-top: 40px
+  @include mediaPhone
+    padding-top: 0
 
   &--single
     .hero-serv__container
@@ -37,6 +41,11 @@
     img
       object-fit: cover
       width: 100%
+    @include mediaDesk
+      padding-bottom: 0
+      height: 630px
+    @include mediaPhone
+      height: 550px
 
   // .hero-found__content
   &__content
@@ -46,7 +55,9 @@
     align-items: center
     justify-content: center
     flex-direction: column
-    z-index: 2
+    z-index: 1
+    @include mediaPhone
+      height: 550px
 
 
   // .hero-found__head

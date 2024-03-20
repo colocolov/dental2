@@ -260,7 +260,7 @@
       "  ${2}"],
 		"description": "media min-width"
   },
-  "media descktop": {
+  "media descktop -- 1280px": {
     "prefix": "desktop",
     "body": [
       "@include mediaDesk",

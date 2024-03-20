@@ -2,6 +2,8 @@
   height: 710px
   background-color: $grey
   position: relative
+  @include mediaPhone
+    height: 550px
 
   // .hero-found__img
   &__img
@@ -22,8 +24,8 @@
     padding-top: 80px
     z-index: 1
     position: relative
-
-
+    @include mediaPhone
+      padding-top: 40px
 
   // .hero-found__head
   &__head
@@ -34,6 +36,10 @@
     max-width: 420px
     margin-left: auto
     margin-bottom: 40px
+    @include mediaPhone
+      font-size: 30px
+      max-width: 251px
+      text-align: right
 
   &__down
     margin-left: auto
