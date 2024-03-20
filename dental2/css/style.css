@@ -2070,6 +2070,12 @@ input {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
+  transition: color 0.3s ease-in;
+}
+@media (any-hover: hover) {
+  .services__title:hover {
+    color: #4d8399;
+  }
 }
 .services__text {
   height: 106px;
@@ -2089,6 +2095,11 @@ input {
 }
 .services--dark .services__head::before {
   background-color: #f7f7f7;
+}
+@media (any-hover: hover) {
+  .services--dark .services__title:hover {
+    color: #33414E;
+  }
 }
 .services--dark .services__link::before {
   background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat;
@@ -2185,7 +2196,7 @@ input {
 }
 @media screen and (max-width: 479.98px) {
   .personal__name {
-    margin-top: -37px;
+    margin-top: -32px;
     font-size: 24px;
   }
 }
@@ -3148,6 +3159,7 @@ input {
 }
 .footer__item a {
   position: relative;
+  cursor: pointer;
 }
 .footer__item a::before {
   position: absolute;

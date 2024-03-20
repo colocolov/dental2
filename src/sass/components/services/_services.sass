@@ -43,6 +43,10 @@
     margin-bottom: 20px
     text-transform: uppercase
     @include font(700, 20, 24)
+    transition: color 0.3s ease-in
+    @media (any-hover: hover)
+      &:hover
+        color: $green
   &__text
     height: 106px
   &__link
@@ -58,6 +62,10 @@
       color: $white
       &::before
         background-color: $white
+    & .services__title
+      @media (any-hover: hover)
+        &:hover
+          color: $black
     & .services__link
       &::before
         background: url(../images/icons/sprite.svg#arrow-more-white) center/cover no-repeat
