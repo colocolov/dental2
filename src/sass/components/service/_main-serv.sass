@@ -1,6 +1,9 @@
 .main-serv
   padding-top: 80px
   padding-bottom: 80px
+  @include mediaPhone
+    padding-top: 20px
+    padding-bottom: 40px
 
   // .main-serv__container
   &__container
@@ -14,16 +17,34 @@
     row-gap: 80px
     column-gap: 20px
     height: 1360px
-    // Your container needs a fixed height, and it 
-    // needs to be taller than your tallest column.
-
+    @include mediaPhoneMid
+      row-gap: 40px
+      height: auto
 
   // .main-serv__item
   &__item
     width: 49%
+    @include mediaPhoneMid
+      width: 100%
+      &:nth-child(1)
+        order: 2
+      &:nth-child(2)
+        order: 4
+      &:nth-child(3)
+        order: 1
+      &:nth-child(4)
+        order: 3
+      &:nth-child(5)
+        order: 5
+      &:nth-child(6)
+        order: 6
+        margin-top: 0 !important
     &--bt
       padding-top: 40px
       border-top: 1px solid $black
+    &--btn
+      @include mediaPhoneMid
+        order: 1
     &:last-child
       text-align: center
       margin-top: 40px
@@ -46,12 +67,16 @@
   &__info
     padding: 40px 20px
     border: 1px solid $black
+    @include mediaPhoneMid
+      padding: 10px
 
   // .main-serv__title
   &__title
     @include font(600, 30, 37)
     color: $black
     margin-bottom: 10px
+    @include mediaPhoneMid
+      font-size: 24px
 
   // .main-serv__text
   &__text

@@ -28,14 +28,27 @@
         .team__img
           img
             transform: scale(1.015)
+    @include mediaDesk
+      width: 48.5%
+    @include mediaPhone
+      width: 48%
+    @include mediaPhoneMid
+      width: 47.5%
+    @include mediaPhoneSm
+      width: 100%
     &--wide
       width: 96.666667% // 1160/1200
       flex-direction: row-reverse
       // height: 400px
+      @include mediaPhoneMid
+        flex-direction: column
+        width: 100%
       .team__img
         position: relative
         width: 630px
         padding-bottom: 31.25% // 400/1280
+        @include mediaPhoneMid
+          width: 100%
       .team__info
         align-self: center
         width: 610px
@@ -45,11 +58,17 @@
         transition: border 0.3s ease-in
         &::before
           content: none
+        @include mediaPhoneMid
+          width: 95%
+          margin-right: 0
+          margin-top: -35px
       @media (any-hover: hover)
         &:hover
           .team__info
             color: $black
             border: 1px solid $green
+      .team__text
+        margin-top: 40px
 
   // .team__info
   &__info

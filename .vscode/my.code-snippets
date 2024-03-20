@@ -161,6 +161,12 @@
     "body": ["&:not(:last-child)", "  $1"],
     "description": "not-last-child"
   },
+	"nth-child": {
+    "prefix": "ntc",
+    "body": ["&:nth-child(${1})", "  $2"],
+    "description": "nth-child"
+  },
+
   "after": {
     "prefix": "aft",
     "body": ["&::after", "  $1"],

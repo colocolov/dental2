@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#111111" />
   <!-- подключение стилей -->
-  <link rel="stylesheet" href="css/style.min.css?ver=1.2.3" />
+  <link rel="stylesheet" href="css/style.min.css?ver=1.5.1" />
   <!-- подключение скриптов -->
-  <script defer src="js/main.min.js?ver=1.2.3"></script>
+  <script defer src="js/main.min.js?ver=1.5.1"></script>
   <!-- подключение favicon -->
   <!-- <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -93,6 +93,7 @@
         <p>Rezultatele acestei practici sunt produse prin colaborarea interdisciplinară și au un impact
           semnificativ asupra calității vieții pacienților.</p>
       </div>
+      <button id="showMoreBtn" class="btn-reset hero-serv__text--more">Подробнее</button>
     </div>
 
   </div><!-- /.hero-serv__container -->
@@ -101,7 +102,6 @@
   <div class="main-serv__container">
 
     <div 1iv class="main-serv__wrap">
-
 
       <div class="main-serv__item">
         <div class="main-serv__img _ibg">
@@ -132,12 +132,13 @@
         </div>
       </div><!-- /.main-serv__item -->
 
-      <div class="main-serv__item">
+      <div class="main-serv__item main-serv__item--btn">
         <div class="sticks sticks--hide main-serv__sticks">
           <a href="found.html" class="sticks__item">
             <div class="sticks__arrow"></div>
             <div class="sticks__text">
-              <p class="sticks__title">Организуем ваше пребывание на лечении</p>
+              <p class="sticks__title sticks__title--btn">Обеспечение</p>
+              <p class="sticks__title sticks__title--txt">Организуем ваше пребывание на лечении</p>
               <p class="sticks__link btn__link-more">Подробнее</p>
             </div>
           </a>
@@ -199,7 +200,10 @@
 
   <div class="about__wrap">
     <div class="about__img">
-      <img src="images/found/hero.jpg" loading="lazy" width="" height="" alt="">
+      <picture>
+        <source srcset="images/found/hero-mob.jpg" media="(max-width: 768px)" />
+        <img src="images/found/hero.jpg" loading="lazy" width="" height="" alt="">
+      </picture>
     </div>
 
     <div class="about__container about__container-content">

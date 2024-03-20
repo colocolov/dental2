@@ -6,6 +6,8 @@
     padding-top: 0
 
   &--single
+    @include mediaNotebook
+      padding-top: 0
     .hero-serv__container
     .hero-serv__img::before
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%)
@@ -15,8 +17,15 @@
       justify-content: space-between
       align-items: unset
       // height: 100%
+      @include mediaPhone
+        padding: 40px
+        justify-content: flex-start
     .hero-serv__head
       text-transform: uppercase
+      @include mediaPhone
+        font-size: 36px
+        text-align: center
+        margin-bottom: 10px
 
   // .hero-found__container
   &__container
@@ -73,4 +82,22 @@
     color: $white
     p:not(:last-child)
       margin-bottom: 7px
+    @include mediaPhone
+      font-size: 16px
+      text-align: center
+      overflow: hidden
+      max-height: 40px
+      transition: max-height 1.3s ease
+    &.expanded
+      max-height: 400px
+    &--more
+      display: none
+      @include mediaPhone
+        margin: 0 auto
+        margin-top: 7px
+        color: $white
+        display: block
+        line-height: 2
+        border-bottom: 1px solid $white
+        width: max-content
 
