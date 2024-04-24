@@ -2,6 +2,11 @@
   padding-top: 80px
   &--dark
     background-color: $green
+    & .about__head
+      color: $white
+      margin-bottom: 70px
+      &::before
+        background-color: $white
   &--single
     @include mediaPhone
       padding-top: 40px
@@ -55,11 +60,6 @@
   // .about__head
   &__head
     margin-bottom: 40px
-    &--light
-      color: $white
-      margin-bottom: 70px
-      &::before
-        background-color: $white
 
   // .about__wrap
   &__wrap

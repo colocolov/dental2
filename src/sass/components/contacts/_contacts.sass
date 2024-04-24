@@ -69,6 +69,8 @@
     height: 60px
     display: flex
     align-items: flex-end
+    p
+      width: 100%
   &__input
     padding: 10px
     background-color: transparent
@@ -80,7 +82,7 @@
       color: rgba($black, 0.6)
       transition: color 0.3s ease
     &:focus
-      border: 1px solid $green
+      // border: 1px solid $green
 
   &__text
     height: 200px
@@ -96,7 +98,7 @@
     &::placeholder
       transform: translateY(157px)
     &:focus
-      border: 1px solid $green
+      // border: 1px solid $green
 
 
 
@@ -110,10 +112,9 @@
   padding: 17px !important
   font-size: 16px
   order: 1
+  border-color: $green !important // ------------- ЦВЕТ РАМКИ У ОШИБКИ
 .wpcf7-not-valid-tip
   font-weight: 600
   position: relative
-  bottom: 6px
-.wpcf7-form p
-  @include mediaPhone
-    text-align: center
+  bottom: 0
+  padding-left: 10px

@@ -10,22 +10,29 @@
 
   // .main-serv__wrap
   &__wrap
-    display: flex
-    // flex-wrap: wrap
-    flex-flow: column wrap
-    align-content: space-between
-    row-gap: 80px
+    // display: flex
+    // // flex-wrap: wrap
+    // flex-flow: column wrap
+    // align-content: space-between
+    // row-gap: 80px
+    width: 100%
+    columns: 2
     column-gap: 20px
-    height: 1360px
+    // height: 1360px
     @include mediaPhoneMid
+      columns: 1
       row-gap: 40px
       height: auto
 
   // .main-serv__item
   &__item
-    width: 49%
+    // width: 49%
+    width: 100%
+    margin-bottom: 80px
+    break-inside: avoid
     @include mediaPhoneMid
-      width: 100%
+      margin-bottom: 40px
+      // width: 100%
       &:nth-child(1)
         order: 2
       &:nth-child(2)
