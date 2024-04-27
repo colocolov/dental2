@@ -1,12 +1,14 @@
 // мобильное меню
 
 //выпадающее меню для мобильных устройств
-document.addEventListener("click", documentActions);
+// раскоментироват если надо !!!!! ПРОВЕРИТЬ НА РАБОТОСПОСОБНОСТЬ КОДА
+//document.addEventListener("click", documentActions);
 
 function documentActions(e) {
   const targetElement = e.target;
   if (window.innerWidth > 900) {
     if (targetElement.classList.contains("menu__arrow")) {
+      //console.log(targetElement);
       targetElement.closest(".menu__item").classList.toggle("_hover");
     }
     if (
@@ -18,6 +20,40 @@ function documentActions(e) {
     }
   }
 }
+
+// стрелка для выпадающего меню
+document.addEventListener('DOMContentLoaded', function() {
+    const menuItemHasChildren = document.querySelectorAll('.menu-item-has-children');
+
+    menuItemHasChildren.forEach(function(item) {
+        item.addEventListener('click', function(event) {
+            event.preventDefault(); // Отменяем стандартное действие ссылки
+            this.classList.toggle('_active'); // Добавляем или удаляем класс active при клике
+            event.stopPropagation(); // Останавливаем всплытие события клика, чтобы не закрывать меню
+        });
+
+        // Добавляем обработчик клика на дочерние элементы меню, чтобы предотвратить закрытие меню
+        const submenuItems = item.querySelectorAll('.menu__item');
+        submenuItems.forEach(function(subitem) {
+            subitem.addEventListener('click', function(event) {
+                event.stopPropagation(); // Останавливаем всплытие события клика на дочерних элементах
+            });
+        });
+    });
+
+    // Добавляем обработчик события на документ, чтобы закрывать открытые меню при клике вне меню
+    document.addEventListener('click', function(event) {
+        menuItemHasChildren.forEach(function(item) {
+            if (!item.contains(event.target)) { // Проверяем, является ли цель клика дочерним элементом меню
+                item.classList.remove('_active'); // Удаляем класс active у всех элементов
+            }
+        });
+    });
+});
+
+
+
+
 
 // проверка, является ли уствройство мобильным
 const isMobile = {

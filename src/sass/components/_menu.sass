@@ -1,8 +1,21 @@
+:root
+  //--- ВЫСОТА БУРГЕРА
+  --height-burger: 22px
+  //--- ШИРИНА БУРГЕРА
+  --width-burger: 30px
+  //--- ТОЛЩИНА ПОЛОСКИ БУРГЕРА
+  --height-span: 2px
+  //--- ВЫСОТА ЭЛЕМЕНТА МЕНЮ / ДЛЯ ВЫПАДАЮЩЕГО МЕНЮ !!! минус 2px от высоты элемента
+  --height-item-menu: 18px
+  //--- ВЫСОТА ЭЛЕМЕНТА МЕНЮ ЯЗЫКОВ !!! минус 2px от высоты элемента
+  --height-item-lang: 18px
+
+
+/// сделать отступ у меню имено у ссылки а чтобы клик площади был больше
+
 .menu
-  --height-span: 22px //--- ВЫСОТА БУРГЕРА
-  --width-span: 30px //--- ШИРИНА БУРГЕРА
-  --weight-span: 2px //--- ТОЛЩИНА ПОЛОСКИ БУРГЕРА
   // margin-left: 50px
+
   &__body
     // margin-top: -5px
     @include mediaPhone
@@ -19,7 +32,7 @@
       z-index: 2
       // justify-content: flex-end
       opacity: .98
-      // подложка под верхнее меню, если оно имеет фон
+      //--- подложка под верхнее меню, если оно имеет фон
       &::before
         content: ''
         position: fixed
@@ -56,7 +69,7 @@
     transition: color 0.3s ease
     &:not(:last-child)
       margin-right: 39px
-    // нижняя линия при наведении
+    //--- нижняя линия при наведении
     &::before
       position: absolute
       content: ''
@@ -85,20 +98,20 @@
     @include mediaPhone
       display: block
       position: relative
-      width: 30px
-      height: 24px
+      width: var(--width-burger)
+      height: var(--height-burger)
+      padding: 2px 0
       border: none
       background-color: transparent
       cursor: pointer
       outline: none
       z-index: 5
-      padding: 2px 0
     span
       position: absolute
       top: calc( 50% - 1px )
       left: 0
       width: 100%
-      height: 2px // ---------- ТОЛЩИНА ПОЛОСКИ У БУРГЕРА
+      height: var(--height-span) // ---------- ТОЛЩИНА ПОЛОСКИ У БУРГЕРА
       background-color: rgba($text, 0.9) // ---------- ЦВЕТ ПОЛОСОК У БУРГЕРА
       &:first-child
         top: 0
@@ -121,31 +134,13 @@
           transform: rotate(45deg)
           transition: transform .3s ease-in-out, top .3s ease-in-out
 
-  &-languages
-    @include mediaPhone
-      order: 1
-    & .wpml-ls-item > a
-      position: relative
-      &::after
-        content: ''
-        position: absolute
-        top: 50%
-        right: -1px
-        width: 11px
-        height: 11px
-        background: url("../images/icons/sprite.svg#arrow-down") center / cover no-repeat
-        transform: translateY(-50%)
-        @include mediaPhone
-          width: 22px
-          height: 22px
-          // padding: 7px
-          // border: 1px solid $white
-
+  //-- ВЫПАДАЮЩЕЕ МЕНЮ
+  &__dropdown
     // submenu TEST
     & ul a
       color: $white
     & li a
-      padding: 20px
+      // padding: 20px
       display: flex
       justify-content: space-between
       transition: background-color 0.3s ease
@@ -155,49 +150,82 @@
         &:last-child a
           color: $white
       @include mediaNotebook
-        padding: 15px 10px
+        // padding: 15px 10px
         margin-bottom: 7px
       @include mediaPhone
         width: 100%
         padding: 10px 20px
         margin-bottom: 0
+    //-- АКТИВНЫЙ ЭЛЕМЕНТ    
     & li.current-menu-item a
-      background-color: lighten($green, 3)
+      color: $green
+      // background-color: lighten($green, 3)
+    //-- ВЫПАДАЮЩЕЕ МЕНЮ->стрелка
+    & li.menu-item-has-children
+      & > a
+        position: relative
+        &::after
+          content: ''
+          position: absolute
+          top: 50%
+          right: -18px
+          width: 11px
+          height: 11px
+          background: url("../images/icons/sprite.svg#arrow-down") center / cover no-repeat
+          transform: translateY(-50%)
+          transition: transform 0.3s ease-in
+          @include mediaPhone
+            width: 22px
+            height: 22px
+      @media (any-hover: hover)
+        &:hover > a::after,
+        &:hover li.menu__item > a::after
+          transform: translateY(-50%) rotate(-180deg)
+      &._active > a::after
+        transform: translateY(-50%) rotate(-180deg)
+
+    & li:hover > ul
+      max-height: 500px
+      opacity: 1
+      pointer-events: initial
+      top: var(--height-item-menu)
+      transition: top 0.3s
+      @include mediaPhone
+        top: 0
+        background-color: lighten($green, 3)
     & li ul
       position: absolute
       left: 0
-      width: auto
+      width: 200px
       background-color: lighten($green, 1)
       z-index: 50
       //display: none
-
       overflow: hidden
       max-height: 0
       opacity: 0
       top: 65px
       pointer-events: none
-      transition: max-height .4s ease-out, opacity 0.3s, top 0.3s
+      transition: max-height .4s ease-out, opacity 0.3s ease-in, top 0.3s ease-in
       @include mediaPhone
         position: relative
         width: 100%
         left: 0
-    & li:hover > ul
-      max-height: 500px
-      opacity: 1
-      pointer-events: initial
-      top: 60px
-      transition: top 0.3s
-      @include mediaPhone
-        top: 0
-        background-color: lighten($green, 3)
     & li ul li
+      position: relative
       width: 100%
       border-top: 1px solid rgba(0, 0, 0, 0.2)
+      transition: background-color 0.3s ease-in
+      @media (any-hover: hover)
+        &:hover
+          background-color: lighten($green, 5)
+    & li ul li a
+      padding: 15px 25px
       @include mediaPhone
-        border: none
-        & a
-          padding-left: 40px
-
+        padding: 10px 0 10px 20px
+    @include mediaPhone
+      border: none
+      & a
+        padding-left: 40px
     @include mediaPhone
       & li
         display: flex
@@ -216,6 +244,40 @@
         max-height: unset
         display: flex
         z-index: 1
+      & li ul li
+        border-top: none
+        padding: 0
       & li ul a
         font-size: 20px
         padding-right: 0
+
+  //-- МЕНЮ ЯЗЫКОВ
+  &-languages
+    @media(max-width: 1340px)
+      margin-right: 15px
+    @include mediaPhone
+      order: 1
+      margin-right: 0
+    // & .wpml-ls-item > a
+    //   position: relative
+    //   &::after
+    //     content: ''
+    //     position: absolute
+    //     top: 50%
+    //     right: -1px
+    //     width: 11px
+    //     height: 11px
+    //     background: url("../images/icons/sprite.svg#arrow-down") center / cover no-repeat
+    //     transform: translateY(-50%)
+    //     @include mediaPhone
+    //       width: 22px
+    //       height: 22px
+    & li ul
+      @media(max-width: 1340px)
+        left: -100%
+      @include mediaPhone
+        left: 0
+    & li a
+      // padding: 20px
+    & li:hover > ul
+      top: var(--height-item-lang)

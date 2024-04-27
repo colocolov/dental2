@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#111111" />
   <!-- подключение стилей -->
-  <link rel="stylesheet" href="css/style.min.css?ver=1.5.1" />
+  <link rel="stylesheet" href="css/style.min.css?ver=1.5.10" />
   <!-- подключение скриптов -->
-  <script defer src="js/main.min.js?ver=1.5.1"></script>
+  <script defer src="js/main.min.js?ver=1.5.10"></script>
   <!-- подключение favicon -->
   <!-- <link rel="icon" href="images/favicon/favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -47,17 +47,17 @@
       </ul>
       <div class="header__menu menu">
         <nav class="menu__body" title="Main navigation">
-          <ul class="menu__list menu-languages">
-            <li class="menu__item"><a class="menu__link" href="/">Главная</a></li>
-            <li class="menu__item">
-              <a class="menu__link" href="personal.html">О нас</a>
+          <ul class="menu__list menu__dropdown">
+            <li class="menu__item current-menu-item"><a href="/">Главная</a></li>
+            <li class="menu__item menu-item-has-children">
+              <a href="#">О нас</a>
               <ul>
-                <li class="menu__item"><a class="menu__link" href="personal.html">Персонал</a></li>
-                <li class="menu__item"><a class="menu__link" href="reviews.html">Отзывы</a></li>
+                <li class="menu__item"><a href="personal.html">Персонал</a></li>
+                <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
               </ul>
             </li>
-            <li class="menu__item"><a class="menu__link" href="services.html">Услуги</a></li>
-            <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+            <li class="menu__item"><a href="services.html">Услуги</a></li>
+            <li class="menu__item"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
         <button type="button" aria-label="Open Menu" aria-expanded="false" class="menu__icon">
@@ -68,12 +68,12 @@
       </div><!-- /.menu -->
     </div><!-- /.header__center -->
 
-    <ul class="menu-languages menu__list" data-da=".menu__body,767.98,1">
-      <li class="menu-item-language wpml-ls-item wpml-ls-current-language menu__item">
-        <a href="#" class="menu__link">Ru</a>
-        <ul class="sub-menu2 language-dropdow2n">
-          <li class="menu-item-language2 wpml-ls-item2"><a href="#">Ro</a></li>
-          <li class="menu-item-language2 wpml-ls-item2"><a href="#">En</a></li>
+    <ul class="menu__list menu__dropdown menu-languages" data-da=".menu__body,767.98,1">
+      <li class="menu-item-language wpml-ls-item wpml-ls-current-language menu-item-has-children menu__item">
+        <a href="#">Ru</a>
+        <ul>
+          <li><a href="#">Ro</a></li>
+          <li><a href="#">En</a></li>
         </ul>
       </li>
     </ul>
