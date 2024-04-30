@@ -7,10 +7,12 @@ if (reviewsVideo) {
 		let video = document.createElement('video');
 		
 		video.controls = true;
-		video.playsinline = '';
+		// video.playsinline = '';
 		video.autoplay = true;
-		video.muted = false;
+		// video.muted = false;
 		video.src = id;
+		video.setAttribute('playsinline', '');
+		video.setAttribute('controls', 'true');
 		
 		return video;
 	};

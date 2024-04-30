@@ -11,6 +11,7 @@
     flex-wrap: wrap
     row-gap: 40px
     column-gap: 20px
+    justify-content: space-between
 
   // .team__item
   &__item
@@ -40,9 +41,10 @@
       width: 96.666667% // 1160/1200
       flex-direction: row-reverse
       // height: 400px
+      @include mediaPhone
+        width: 100%
       @include mediaPhoneMid
         flex-direction: column
-        width: 100%
       .team__img
         position: relative
         width: 630px
@@ -69,6 +71,7 @@
             border: 1px solid $green
       .team__text
         margin-top: 40px
+        max-width: 380px
 
   // .team__info
   &__info
