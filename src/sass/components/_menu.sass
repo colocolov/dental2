@@ -11,11 +11,10 @@
   --height-item-lang: 18px
 
 
-/// сделать отступ у меню имено у ссылки а чтобы клик площади был больше
+/// сделать отступ у меню имено у ссылки, чтобы клик площади был больше
 
 .menu
   // margin-left: 50px
-
   &__body
     // margin-top: -5px
     @include mediaPhone
@@ -31,7 +30,7 @@
       transition: right 0.5s ease 0s
       z-index: 2
       // justify-content: flex-end
-      opacity: .98
+      opacity: 1
       //--- подложка под верхнее меню, если оно имеет фон
       &::before
         content: ''
@@ -83,8 +82,13 @@
       &:hover
         &::before
           width: 100%
+    //-- АКТИВНЫЙ ЭЛЕМЕНТ    
+    &.current-menu-item a
+      color: $green
+      // background-color: lighten($green, 3)
 
     @include mediaPhone
+      width: 100%
       margin-bottom: 40px
       // font-weight: 800
       font-size: 32px
@@ -136,6 +140,9 @@
 
   //-- ВЫПАДАЮЩЕЕ МЕНЮ
   &__dropdown
+    @include mediaPhone
+      margin-bottom: 20px
+      border-bottom: 2px solid lighten($black, 5)
     // submenu TEST
     & ul a
       color: $white
@@ -145,10 +152,10 @@
       justify-content: space-between
       transition: background-color 0.3s ease
       @media (any-hover: hover)
-      &:hover
-        // background-color: lighten($green, 3)
-        &:last-child a
-          color: $white
+        &:hover
+          // background-color: lighten($green, 3)
+          &:last-child a
+            color: $white
       @include mediaNotebook
         // padding: 15px 10px
         margin-bottom: 7px
@@ -156,10 +163,10 @@
         width: 100%
         padding: 10px 20px
         margin-bottom: 0
-    //-- АКТИВНЫЙ ЭЛЕМЕНТ    
-    & li.current-menu-item a
-      color: $green
-      // background-color: lighten($green, 3)
+        // width: auto
+        font-size: 20px
+        padding-right: 0
+
     //-- ВЫПАДАЮЩЕЕ МЕНЮ->стрелка
     & li.menu-item-has-children
       & > a
@@ -177,13 +184,20 @@
           @include mediaPhone
             width: 22px
             height: 22px
+            // top: 0
+            right: 0
+            z-index: 5
+            background: url("../images/icons/sprite.svg#arrow-down-light") center / cover no-repeat
       @media (any-hover: hover)
         &:hover > a::after,
         &:hover li.menu__item > a::after
           transform: translateY(-50%) rotate(-180deg)
       &._active > a::after
         transform: translateY(-50%) rotate(-180deg)
+      &._active > ul //--  на мобилках появление выпадающего меню при клике по родителю
+        max-height: 500px
 
+    //--- ВТОРОЕ ВЫПАДАЮЩЕЕ МЕНЮ
     & li:hover > ul
       max-height: 500px
       opacity: 1
@@ -192,7 +206,8 @@
       transition: top 0.3s
       @include mediaPhone
         top: 0
-        background-color: lighten($green, 3)
+        background-color: lighten($black, 3)
+        max-height: 0
     & li ul
       position: absolute
       left: 0
@@ -208,48 +223,33 @@
       transition: max-height .4s ease-out, opacity 0.3s ease-in, top 0.3s ease-in
       @include mediaPhone
         position: relative
+        // width: auto
         width: 100%
-        left: 0
+        // left: 0
+        opacity: 1
+        top: 0
+        background-color: lighten($black, 5)
+        // max-height: unset
+        // display: flex
+        z-index: 1
+
     & li ul li
       position: relative
       width: 100%
       border-top: 1px solid rgba(0, 0, 0, 0.2)
       transition: background-color 0.3s ease-in
+      margin-bottom: 0px
       @media (any-hover: hover)
         &:hover
           background-color: lighten($green, 5)
+      @include mediaPhone
+        border-top: none
+        padding: 0
+        padding-left: 20px
     & li ul li a
       padding: 15px 25px
       @include mediaPhone
         padding: 10px 0 10px 20px
-    @include mediaPhone
-      border: none
-      & a
-        padding-left: 40px
-    @include mediaPhone
-      & li
-        display: flex
-        align-items: center
-        flex-wrap: nowrap
-      & li a
-        width: auto
-        font-size: 20px
-        padding-right: 0
-        &::after
-          content: none !important
-      & li ul
-        opacity: 1
-        top: 0
-        background-color: transparent
-        max-height: unset
-        display: flex
-        z-index: 1
-      & li ul li
-        border-top: none
-        padding: 0
-      & li ul a
-        font-size: 20px
-        padding-right: 0
 
   //-- МЕНЮ ЯЗЫКОВ
   &-languages
@@ -272,12 +272,26 @@
     //     @include mediaPhone
     //       width: 22px
     //       height: 22px
+    & li
+      list-style: none
+      justify-content: flex-end
+      @include mediaPhone
+        margin-bottom: 10px
     & li ul
       @media(max-width: 1340px)
         left: -100%
       @include mediaPhone
         left: 0
+        display: block
+        background-color: transparent
+        width: auto
+        display: flex
+        align-items: center
+        max-height: unset
     & li a
-      // padding: 20px
+      width: auto
+      @include mediaPhone
+        &::after
+          content: none !important
     & li:hover > ul
       top: var(--height-item-lang)

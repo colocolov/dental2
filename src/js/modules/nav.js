@@ -33,10 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Добавляем обработчик клика на дочерние элементы меню, чтобы предотвратить закрытие меню
-        const submenuItems = item.querySelectorAll('.menu__item');
+        const submenuItems = item.querySelectorAll('.menu__item a');
         submenuItems.forEach(function(subitem) {
             subitem.addEventListener('click', function(event) {
-                event.stopPropagation(); // Останавливаем всплытие события клика на дочерних элементах
+              event.stopPropagation(); // Останавливаем всплытие события клика на дочерних элементах
+              // event.preventDefault();
+              // console.log(subitem);
+              subitem.parentElement.classList.toggle('_active');
             });
         });
     });

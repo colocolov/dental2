@@ -17,10 +17,14 @@
     justify-content: space-between
     column-gap: 20px
     row-gap: 80px
+    @include mediaPhone
+      justify-content: center
+
 
   // .reviews__item
   &__item
     flex: 0 1 320px
+    cursor: pointer
     // width: 320px
 
   &__clip
@@ -28,6 +32,9 @@
     height: 570px
     width: 100%
     margin-bottom: 20px
+    @include mediaPhone
+      max-height: 570px
+      height: auto
     &::before
       content: ''
       position: absolute
@@ -50,7 +57,21 @@
       height: 100%
       object-fit: cover
       z-index: -1
+      //---- ДОДОБАВИТЬ В GULP
+      border: none
+      display: block
       // position: fixed
+
+  &__btn
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    svg
+      transition: fill 0.3s ease-in
+      width: 72px
+      height: 72px
+      fill: $white
 
   // .reviews__video
   &__video
@@ -66,3 +87,6 @@
   &__country
     text-align: center
 
+
+.video:hover .reviews__btn svg
+  fill: $green

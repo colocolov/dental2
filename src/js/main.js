@@ -10,6 +10,7 @@ import "./modules/personal-slider.js";
 import "./modules/sticks.js";
 import "./modules/animateNumber.js";
 import "./modules/showMore.js";
+import "./modules/reviewsVideo.js";
 import "./modules/footerMenu.js";
 
 //import * as navMenu from "./modules/accordeon.js";
