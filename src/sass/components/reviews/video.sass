@@ -1,0 +1,80 @@
+.video
+
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    // display: grid
+    // grid-template-columns: repeat(3, 320px)
+    justify-content: space-between
+    column-gap: 20px
+    row-gap: 80px
+    @include mediaPhone
+      justify-content: center
+
+  // .video__item
+  &__item
+    flex: 0 1 320px
+    cursor: pointer
+    // width: 320px
+    &:hover .video__btn svg
+      fill: $green
+
+  &__clip
+    position: relative
+    height: 570px
+    width: 100%
+    margin-bottom: 20px
+    @include mediaPhone
+      height: auto
+      max-height: 570px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      //---- ДОДОБАВИТЬ В GULP
+      opacity: 0.3
+      background-image: linear-gradient(180deg, #000000 0%, transparent)
+    video,
+    iframe,
+    object,
+    embed
+      background-size: cover
+      min-width: 100%
+      min-height: 100%
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: 2
+      //---- ДОДОБАВИТЬ В GULP
+      position: relative
+      border: none
+      display: block
+
+  &__btn
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    svg
+      transition: fill 0.3s ease-in
+      width: 72px
+      height: 72px
+      fill: $white
+
+  // .video__video
+  &__video
+
+  // .video__title
+  &__title
+    text-align: center
+    color: $green
+    font-weight: 600
+    font-size: 30px
+
+  // .video__subtitle
+  &__subtitle
+    text-align: center
+

@@ -1156,7 +1156,7 @@ input {
     background-color: #33414E;
     overflow: auto;
     transition: right 0.5s ease 0s;
-    z-index: 2;
+    z-index: 5;
     opacity: 1;
   }
   .menu__body::before {
@@ -1364,7 +1364,7 @@ input {
 @media screen and (max-width: 767.98px) {
   .menu__dropdown li:hover > ul {
     top: 0;
-    background-color: #394957;
+    background-color: #33414E;
     max-height: 0;
   }
 }
@@ -1387,7 +1387,6 @@ input {
     width: 100%;
     opacity: 1;
     top: 0;
-    background-color: #3d4e5d;
     z-index: 1;
   }
 }
@@ -1992,7 +1991,7 @@ input {
   left: 0;
   height: var(--height);
   width: 100%;
-  filter: blur(2px);
+  filter: blur(1px);
 }
 .hero__clip video,
 .hero__clip iframe,
@@ -2005,6 +2004,9 @@ input {
   height: 100%;
   object-fit: cover;
   z-index: -5;
+  border: none;
+  display: block;
+  position: relative;
 }
 .hero__container {
   display: flex;
@@ -2834,7 +2836,7 @@ input {
 .reviews__head {
   margin-bottom: 40px;
 }
-.reviews__wrap {
+.video__wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2842,41 +2844,43 @@ input {
   row-gap: 80px;
 }
 @media screen and (max-width: 767.98px) {
-  .reviews__wrap {
+  .video__wrap {
     justify-content: center;
   }
 }
-.reviews__item {
+.video__item {
   flex: 0 1 320px;
   cursor: pointer;
 }
-.reviews__clip {
+.video__item:hover .video__btn svg {
+  fill: #4d8399;
+}
+.video__clip {
   position: relative;
   height: 570px;
   width: 100%;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 767.98px) {
-  .reviews__clip {
-    max-height: 570px;
+  .video__clip {
     height: auto;
+    max-height: 570px;
   }
 }
-.reviews__clip::before {
+.video__clip::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(90deg, #000000 0%, transparent);
   opacity: 0.3;
   background-image: linear-gradient(180deg, #000000 0%, transparent);
 }
-.reviews__clip video,
-.reviews__clip iframe,
-.reviews__clip object,
-.reviews__clip embed {
+.video__clip video,
+.video__clip iframe,
+.video__clip object,
+.video__clip embed {
   background-size: cover;
   min-width: 100%;
   min-height: 100%;
@@ -2888,30 +2892,26 @@ input {
   border: none;
   display: block;
 }
-.reviews__btn {
+.video__btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.reviews__btn svg {
+.video__btn svg {
   transition: fill 0.3s ease-in;
   width: 72px;
   height: 72px;
   fill: #f7f7f7;
 }
-.reviews__title {
+.video__title {
   text-align: center;
   color: #4d8399;
   font-weight: 600;
   font-size: 30px;
 }
-.reviews__country {
+.video__subtitle {
   text-align: center;
-}
-
-.video:hover .reviews__btn svg {
-  fill: #4d8399;
 }
 
 .hero-adv__container--wide {
@@ -2967,9 +2967,18 @@ input {
   overflow: hidden;
 }
 
+.about-video {
+  padding: 80px 0;
+}
+.about-video__head {
+  margin-bottom: 40px;
+}
 .team {
   padding-top: 80px;
   padding-bottom: 80px;
+}
+.team__head {
+  margin-bottom: 40px;
 }
 .team__wrap {
   display: flex;

@@ -1,4 +1,4 @@
-const reviewsVideo = document.querySelectorAll('.video');
+const reviewsVideo = document.querySelectorAll('.video__clip');
 
 if (reviewsVideo) {
 	

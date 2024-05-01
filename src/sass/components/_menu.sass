@@ -28,7 +28,8 @@
       background-color: $black // ---------- ЦВЕТ ФОНА У МЕНЮ
       overflow: auto
       transition: right 0.5s ease 0s
-      z-index: 2
+      //---- ДОДОБАВИТЬ В GULP
+      z-index: 5
       // justify-content: flex-end
       opacity: 1
       //--- подложка под верхнее меню, если оно имеет фон
@@ -206,7 +207,7 @@
       transition: top 0.3s
       @include mediaPhone
         top: 0
-        background-color: lighten($black, 3)
+        background-color: $black
         max-height: 0
     & li ul
       position: absolute
@@ -229,7 +230,7 @@
         // left: 0
         opacity: 1
         top: 0
-        background-color: lighten($black, 5)
+        // background-color: lighten($black, 5)
         // max-height: unset
         // display: flex
         z-index: 1
