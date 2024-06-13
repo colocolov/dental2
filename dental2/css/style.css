@@ -1409,6 +1409,12 @@ input {
     padding-left: 20px;
   }
 }
+.menu__dropdown li ul li.current-menu-item {
+  background-color: #5691aa;
+}
+.menu__dropdown li ul li.current-menu-item a {
+  color: #f7f7f7;
+}
 .menu__dropdown li ul li a {
   padding: 15px 25px;
 }
@@ -2850,7 +2856,6 @@ input {
 }
 .video__item {
   flex: 0 1 320px;
-  cursor: pointer;
 }
 .video__item:hover .video__btn svg {
   fill: #4d8399;
@@ -2860,6 +2865,7 @@ input {
   height: 570px;
   width: 100%;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767.98px) {
   .video__clip {
@@ -3306,6 +3312,7 @@ input {
 }
 .footer__item {
   transition: color 0.3s ease;
+  color: #f7f7f7;
 }
 .footer__item:not(:last-child) {
   margin-bottom: 19px;
