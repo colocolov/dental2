@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuItemHasChildren.forEach(function(item) {
         item.addEventListener('click', function(event) {
             event.preventDefault(); // Отменяем стандартное действие ссылки
-            this.classList.toggle('_active'); // Добавляем или удаляем класс active при клике
+            //this.classList.toggle('_active'); // Добавляем или удаляем класс active при клике
             event.stopPropagation(); // Останавливаем всплытие события клика, чтобы не закрывать меню
         });
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
               event.stopPropagation(); // Останавливаем всплытие события клика на дочерних элементах
               // event.preventDefault();
               // console.log(subitem);
-              subitem.parentElement.classList.toggle('_active');
+              //subitem.parentElement.classList.toggle('_active');
             });
         });
     });
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(event) {
         menuItemHasChildren.forEach(function(item) {
             if (!item.contains(event.target)) { // Проверяем, является ли цель клика дочерним элементом меню
-                item.classList.remove('_active'); // Удаляем класс active у всех элементов
+                //item.classList.remove('_active'); // Удаляем класс active у всех элементов
             }
         });
     });

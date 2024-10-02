@@ -15,6 +15,16 @@
     row-gap: 40px
     column-gap: 20px
     justify-content: space-between
+    &--wide
+      display: flex
+      flex-direction: column-reverse
+      row-gap: 40px
+      margin: 0 auto
+      padding: 0 45px
+      align-items: center
+      width: 100%
+      @include mediaTablet
+        padding: 0
 
   // .team__item
   &__item
@@ -37,13 +47,23 @@
     @include mediaPhone
       width: 48%
     @include mediaPhoneMid
-      width: 47.5%
-    @include mediaPhoneSm
       width: 100%
+      // width: 47.5%
+    // @include mediaPhoneSm
     &--wide
       width: 96.666667% // 1160/1200
       flex-direction: row-reverse
       // height: 400px
+      &:nth-child(even)
+        flex-direction: row
+        @include mediaPhoneMid
+          flex-direction: column
+        .team__info
+          margin-right: auto
+          margin-left: -50px
+          @include mediaPhoneMid
+            margin-right: 0
+            margin-left: 0
       @include mediaPhone
         width: 100%
       @include mediaPhoneMid

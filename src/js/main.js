@@ -7,6 +7,7 @@ import "./modules/dinam-adap.js";
 
 import "./modules/heroImgUrl.js";
 import "./modules/personal-slider.js";
+import "./modules/works-slider.js";
 import "./modules/sticks.js";
 import "./modules/animateNumber.js";
 import "./modules/showMore.js";

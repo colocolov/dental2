@@ -1,0 +1,62 @@
+.works
+  padding-bottom: 80px
+
+  &__container
+    position: relative
+
+  &__head
+    margin-bottom: 40px
+
+  &__slider
+    height: 54.807692% // 570/1040
+    margin: 0 120px
+    // overflow: hidden
+    // position: relative
+    @include mediaTablet
+      margin: 0 80px
+    @include mediaPhoneSm
+      margin: 0 40px
+
+    &-wrap
+
+  &__slide
+    width: 320px
+
+  &__img
+    padding-bottom: 178.125% // 570/320
+    @include mediaTablet
+      padding-bottom: 200%
+    @include mediaPhoneSm
+      height: 175px
+      padding-bottom: 100%
+
+  &__navigation
+    // overflow: visible
+    position: absolute
+    top: 50%
+    width: calc(100% - 30px)
+    display: flex
+    justify-content: space-between
+    // right: -120px
+    // left: -120px
+    // z-index: 2
+    transform: translateY(calc(-50% + 37px))
+    @media screen and (max-width: 1310px)
+      // right: 0
+      // transform: translate(-20px, -50%)
+    @include mediaPhoneSm
+      // top: unset
+      // bottom: 0
+      // right: 50%
+      // transform: translate(calc(-50% + 30px), -15%)
+    svg
+      stroke-width: 1px
+      // width: 50px
+      // height: 50px
+      // padding: 6px
+  &--prev
+    // margin-left: -70px
+  &--next
+    // position: relative
+    // margin-right: -70px
+    // z-index: 20

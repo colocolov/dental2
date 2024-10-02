@@ -87,6 +87,9 @@
     &.current-menu-item a
       color: $green
       // background-color: lighten($green, 3)
+    &.pll-parent-menu-item
+      &::before
+        content: none
 
     @include mediaPhone
       width: 100%
@@ -97,6 +100,12 @@
       &:not(:last-child)
         margin-right: 0
         margin-bottom: 10px
+      &::before
+        content: none
+      &.pll-parent-menu-item
+        font-weight: 700
+        &:hover > ul
+          width: auto
 
   &__icon
     display: none
@@ -197,18 +206,27 @@
         transform: translateY(-50%) rotate(-180deg)
       &._active > ul //--  на мобилках появление выпадающего меню при клике по родителю
         max-height: 500px
+        @include mediaPhone
+          max-height: none
+          height: auto
+          width: auto
+          top: 0
+
 
     //--- ВТОРОЕ ВЫПАДАЮЩЕЕ МЕНЮ
     & li:hover > ul
       max-height: 500px
       opacity: 1
+      width: max-content
       pointer-events: initial
       top: var(--height-item-menu)
       transition: top 0.3s
       @include mediaPhone
         top: 0
         background-color: $black
-        max-height: 0
+        max-height: none
+        width: 100%
+        height: auto
     & li ul
       position: absolute
       left: 0
@@ -288,12 +306,13 @@
         left: -100%
       @include mediaPhone
         left: 0
-        display: block
+        // display: block
         background-color: transparent
         width: auto
+        height: auto
         display: flex
         align-items: center
-        max-height: unset
+        max-height: none
     & li a
       width: auto
       @include mediaPhone
@@ -301,3 +320,5 @@
           content: none !important
     & li:hover > ul
       top: var(--height-item-lang)
+      @include mediaPhone
+        top: 0
