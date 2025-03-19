@@ -44,6 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Подменю с Услугами всегда открыто на мобилках
+    const menuItemService = document.querySelector(".menu-item-has-children.noclick");
+    if (menuItemService && window.innerWidth < 768) {
+      menuItemService.classList.add("_hover"); 
+    }
+
     // Добавляем обработчик события на документ, чтобы закрывать открытые меню при клике вне меню
     document.addEventListener('click', function(event) {
         menuItemHasChildren.forEach(function(item) {

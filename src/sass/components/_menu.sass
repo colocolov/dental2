@@ -90,6 +90,13 @@
     &.pll-parent-menu-item
       &::before
         content: none
+    &.noclick._hover > ul
+      @include mediaPhone
+        top: 0
+        background-color: $black
+        max-height: none
+        width: 100%
+        height: auto
 
     @include mediaPhone
       width: 100%
@@ -155,7 +162,7 @@
       border-bottom: 2px solid lighten($black, 5)
     // submenu TEST
     & ul a
-      color: $white
+      color: $white !important
     & li a
       // padding: 20px
       display: flex
@@ -316,6 +323,7 @@
     & li a
       width: auto
       @include mediaPhone
+        width: auto !important
         &::after
           content: none !important
     & li:hover > ul

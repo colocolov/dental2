@@ -2,19 +2,34 @@
   padding-top: 80px
   &--dark
     background-color: $green
+    padding-bottom: 20px
+    & .about__container
+      position: relative
+    & .about__serv
+      display: flex
+      justify-content: space-between
+      margin-top: 60px
+      gap: 20px
+      @include mediaPhone
+        flex-wrap: wrap
+        justify-content: center
     & .about__head
       color: $white
       margin-bottom: 70px
       &::before
         background-color: $white
+    & .works__btns
+      align-items: flex-end
+    & .btn--about
+      color: $white
+      border: 1px solid $white
   &--single
     @include mediaPhone
       padding-top: 40px
-
     .about__img::before
       content: none
     .about__container-serv
-      padding-bottom: 175px
+      padding-bottom: 138px
       @include mediaPhone
         padding-bottom: 40px
     .about__content
@@ -22,8 +37,21 @@
       padding: 60px 0
       display: flex
       flex-direction: column
+      justify-content: flex-start
+      align-items: flex-end
+      @include mediaPhone
+        gap: 20px
+
       @include mediaPhoneMid
         padding: 20px
+        padding-top: 40px
+        // justify-content: center
+        align-items: center
+    .about__group
+      margin-right: unset
+      margin-left: auto
+      @include mediaPhone
+        margin-right: auto
     .about__text
       color: $black
       margin-bottom: 0
@@ -33,23 +61,25 @@
       margin-left: auto
       margin-top: -21px
       @include mediaPhone
-        margin-top: 20px
+        margin-top: 2px
         margin-left: unset
     .about__title
+      max-width: 566px
+      text-align: right
+      margin-bottom: 20px
       @include mediaPhone
         font-size: 24px
-        text-align: right
-        max-width: 250px
-    .about__group
-      @include mediaPhone
-        margin-right: unset
+        text-align: center
+        max-width: 275px
+        margin-right: auto
+        margin-bottom: 0
 
   // .about__container
   &__container
     &-content
       position: relative
       z-index: 1
-      height: 500px
+      height: 538px
       display: flex
       align-items: center
     &-serv
@@ -80,8 +110,8 @@
     top: 0
     left: 0
     width: 100%
-    height: 100%
-    height: 500px
+    // height: 100%
+    height: 538px
     &::before
       content: ''
       position: absolute

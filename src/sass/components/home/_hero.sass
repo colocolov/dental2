@@ -59,18 +59,21 @@
   &__container
     // position: relative
     display: flex
-    justify-content: center
+    justify-content: flex-end
     height: var(--height)
     flex-direction: column
+    padding-bottom: 100px
     // z-index: 2
     @include mediaDesk
       flex-direction: row
-      align-items: center
+      align-items: flex-end
       justify-content: space-between
     @include mediaTablet
+      justify-content: flex-end
       flex-direction: column
       padding-top: 44px
       padding-bottom: 20px
+      align-items: center
 
   &__head
     font-family: 'Forum', serif
@@ -83,20 +86,26 @@
     span
       align-self: center
       display: block
+    @include mediaTablet
+      margin-bottom: 30px
+      text-align: center
     @include mediaPhoneMid
       font-size: 36px
 
   &__sticks
     position: absolute
-    top: 50%
+    bottom: 100px
     right: 0
-    transform: translateY(-50%)
+    min-width: 350px
+    gap: 20px
+    // transform: translateY(-50%)
     @include mediaDesk
       position: relative
       z-index: 1
       top: unset
       right: unset
       transform: unset
+      bottom: auto
     @include mediaTablet
       flex-direction: row
       flex-wrap: wrap

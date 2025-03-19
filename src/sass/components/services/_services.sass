@@ -30,6 +30,11 @@
     overflow: hidden
     img
       transition: transform 1s ease-in-out
+    @include mediaPhone
+      padding-bottom: unset
+      height: auto
+      img
+        position: unset
   &__content
     position: relative
     border: 1px solid $grey
@@ -49,7 +54,12 @@
         color: $green
   &__text
     height: 106px
+    @include mediaPhone
+      height: auto
   &__link
+    @include mediaPhone
+      display: inline-block
+      margin-top: 7px
   &__btn
     text-align: center
 

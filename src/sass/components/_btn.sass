@@ -105,15 +105,17 @@
       content: ''
       position: absolute
       top: 7px
-      right: -25px
+      right: 50%
       width: 16px
       height: 5px
       background: url("../images/icons/sprite.svg#arrow-more") center / cover no-repeat
-      transition: right 0.3s ease-out
+      transition: right 0.3s ease-out, transform 0.3s ease-out
+      transform: translateX(72px)
     @media (any-hover: hover)
       &:hover
         &::before
-          right: -31px
+          // right: -31px
+          transform: translateX(80px)
 
 
 // стрелки слайдера

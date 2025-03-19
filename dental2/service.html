@@ -56,7 +56,13 @@
                 <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
               </ul>
             </li>
-            <li class="menu__item"><a href="services.html">Услуги</a></li>
+            <li class="menu__item menu-item-has-children noclick">
+              <a href="services.html">Услуги</a>
+              <ul>
+                <li class="menu__item"><a href="service.html">Отбеливание</a></li>
+                <li class="menu__item"><a href="service.html">Чистка</a></li>
+              </ul>
+            </li>
             <li class="menu__item"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
@@ -86,11 +92,16 @@
       <section class="hero-serv hero-serv--single">
   <div class="hero-serv__container">
     <div class="hero-serv__img _ibg">
-      <img src="images/services/hero-serv.jpg" loading="lazy" alt="Service">
+
+      <picture>
+        <source srcset="images/services/estetica-mob.jpg" media="(max-width: 767px)">
+        <img src="images/services/hero-serv.jpg" loading="lazy" alt="Service">
+      </picture>
+
     </div>
     <div class="hero-serv__content">
-      <h1 class="hero-serv__head">Эстетика</h1>
-      <div class="hero-serv__text">
+      <h1 class="hero-serv__head unvisible">Эстетика</h1>
+      <div class="hero-serv__text unvisible">
         <p>Эстетика стоматологии направлена на улучшение внешнего вида улыбки, делая ее более приятной и
           привлекательной. Это
           область, которая следует определенным принципам, но определяется творчеством и художественным чувством
@@ -107,6 +118,37 @@
 </section><!-- /.hero-serv -->
       <section class="main-serv">
   <div class="main-serv__container">
+
+    <h2 class="heading reviews__head">НАШИ ПАЦИЕНТЫ</h2>
+
+    <div class="video__wrap main-serv__video">
+
+      <div class="video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" width="320" height="570" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+      <div class="video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" width="320" height="570" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+
+    </div>
 
     <div class="main-serv__wrap">
 
@@ -201,14 +243,14 @@
 </section><!-- /.main-serv -->
       <section class="about about--dark about--single">
   <div class="about__container">
-    <h2 class="heading about__head about__head--light">Забота о вас</h2>
+    <h2 class="heading about__head about__head--light">Dental tourism</h2>
   </div>
 
   <div class="about__wrap">
     <div class="about__img">
       <picture>
-        <source srcset="images/found/hero-mob.jpg" media="(max-width: 768px)">
-        <img src="images/found/hero.jpg" loading="lazy" alt="Service">
+        <!-- <source srcset="images/found/hero-mob.jpg" media="(max-width: 768px)"> -->
+        <img src="images/bg/airbus.jpg" loading="lazy" alt="Service">
       </picture>
     </div>
 
@@ -219,8 +261,7 @@
         </div>
 
         <div class="about__group">
-
-          <div class="about__text">Организуем ваше пребывание на лечении</div>
+          <!-- <div class="about__text">Организуем ваше пребывание на лечении</div> -->
           <a href="contacts.html" class="btn-reset btn btn--about">Связаться</a>
         </div>
       </div><!-- /.about__content -->

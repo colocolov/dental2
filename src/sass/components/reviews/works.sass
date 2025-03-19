@@ -1,5 +1,12 @@
 .works
   padding-bottom: 80px
+  &--index
+    margin-top: 80px
+    & .works__slider
+      margin-bottom: 80px
+  &--reviews
+    & .works__navigation
+      transform: translateY(calc( -50% + 37px ))
 
   &__container
     position: relative
@@ -10,13 +17,23 @@
   &__slider
     height: 54.807692% // 570/1040
     margin: 0 120px
-    // overflow: hidden
+    overflow: hidden
     // position: relative
+    // background-color: grey
+    // position: relative
+    // &::before
+    //   content: ''
+    //   position: absolute
+    //   top: 50%
+    //   left: 0
+    //   width: 100%
+    //   height: 2px
+    //   background-color: #fff
+    //   z-index: 5
     @include mediaTablet
       margin: 0 80px
     @include mediaPhoneSm
       margin: 0 40px
-
     &-wrap
 
   &__slide
@@ -30,6 +47,19 @@
       height: 175px
       padding-bottom: 100%
 
+  &__btns
+    display: flex
+    gap: 20px
+    justify-content: center
+    // margin: 0 auto
+    @include mediaPhoneMid
+      flex-wrap: wrap
+    & .btn--about
+      color: $white
+      @media (any-hover: hover) and (pointer: fine)
+        &:hover
+          color: $green
+
   &__navigation
     // overflow: visible
     position: absolute
@@ -40,15 +70,16 @@
     // right: -120px
     // left: -120px
     // z-index: 2
-    transform: translateY(calc(-50% + 37px))
-    @media screen and (max-width: 1310px)
-      // right: 0
-      // transform: translate(-20px, -50%)
+    transform: translateY(calc(-50% - 26px))
     @include mediaPhoneSm
       // top: unset
       // bottom: 0
       // right: 50%
       // transform: translate(calc(-50% + 30px), -15%)
+    @media screen and (max-width: 410px)
+      // right: 0
+      transform: translateY(calc(-50% - 68px))
+
     svg
       stroke-width: 1px
       // width: 50px

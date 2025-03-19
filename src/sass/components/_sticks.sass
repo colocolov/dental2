@@ -34,7 +34,7 @@
     max-width: 380px
     height: 116px
     display: flex
-    margin-bottom: 10px
+    // margin-bottom: 10px
     // &:not(:last-child)
     @media (any-hover: hover)
       &:hover
@@ -54,10 +54,12 @@
     @include mediaTablet
       max-width: unset
       // width: 151px
-      padding: 10px
+      //padding: 10px
       color: $white
       height: auto
       margin-bottom: 0
+
+
 
   &__arrow
     position: relative
@@ -89,7 +91,7 @@
     p
       padding: 0 30px
       @include mediaPhoneMid
-        padding: 0 10px
+        padding: 2px 35px
     &::before
       position: absolute
       content: ''
@@ -107,10 +109,11 @@
     text-align: center
     margin-bottom: 5px
     text-transform: uppercase
-    @include mediaPhone
-      font-size: 16px
-      font-weight: 400
+    @include mediaTablet
       margin-bottom: 0
+      font-size: 16px
+    @include mediaPhone
+      font-weight: 400
     &--btn
       display: none
       @include mediaTablet

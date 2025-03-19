@@ -98,11 +98,13 @@
     @media screen and (max-width: 1310px)
       right: 0
       transform: translate(-20px, -50%)
+    @include mediaPhoneMid
+      display: none
     @include mediaPhoneSm
-      top: unset
-      bottom: 0
-      right: 50%
-      transform: translate(calc(-50% + 30px), -15%)
+      // top: unset
+      // bottom: 0
+      // right: 50%
+      // transform: translate(calc(-50% + 30px), -15%)
 
 
   // .personal__btn

@@ -56,7 +56,13 @@
                 <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
               </ul>
             </li>
-            <li class="menu__item"><a href="services.html">Услуги</a></li>
+            <li class="menu__item menu-item-has-children noclick">
+              <a href="services.html">Услуги</a>
+              <ul>
+                <li class="menu__item"><a href="service.html">Отбеливание</a></li>
+                <li class="menu__item"><a href="service.html">Чистка</a></li>
+              </ul>
+            </li>
             <li class="menu__item"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
@@ -162,7 +168,7 @@
 </section><!-- /.services -->
       <section class="personal">
   <div class="personal__container">
-    <h2 class="heading personal__head">Персонал</h2>
+    <h2 class="heading personal__head">О нас</h2>
   </div>
 
   <div class="swiper personal__slider">
@@ -213,30 +219,73 @@
   </div>
 
 </section><!-- /.personal -->
-      <section class="about">
-  <div class="about__container">
-    <h2 class="heading about__head">Отзывы</h2>
-  </div>
+      <section class="works works--index">
+  <div class="works__container">
+    <h2 class="heading works__head">Наши работы</h2>
 
-  <div class="about__wrap">
-    <div class="about__img">
-      <img src="images/index/personal-3.jpg" loading="lazy" alt="Personal">
+    <div class="swiper works__slider">
+      <div class="swiper-wrapper works__slider-wrap">
+
+        <div class="swiper-slide works__slide">
+          <div class="works__img _ibg">
+            <img src="images/works/15.png" loading="lazy" width="" height="" alt="">
+          </div>
+        </div><!-- /.slide -->
+        <div class="swiper-slide works__slide">
+          <div class="works__img _ibg">
+            <img src="images/works/16.jpg" loading="lazy" width="" height="" alt="">
+          </div>
+        </div><!-- /.slide -->
+        <div class="swiper-slide works__slide">
+          <div class="works__img _ibg">
+            <img src="images/works/17.png" loading="lazy" width="" height="" alt="">
+          </div>
+        </div><!-- /.slide -->
+        <div class="swiper-slide works__slide">
+          <div class="works__img _ibg">
+            <img src="images/works/18.png" loading="lazy" width="" height="" alt="">
+          </div>
+        </div><!-- /.slide -->
+        <div class="swiper-slide works__slide">
+          <div class="works__img _ibg">
+            <img src="images/works/19.jpg" loading="lazy" width="" height="" alt="">
+          </div>
+        </div><!-- /.slide -->
+        <div class="swiper-slide works__slide">
+          <div class="works__img _ibg">
+            <img src="images/works/20.png" loading="lazy" width="" height="" alt="">
+          </div>
+        </div><!-- /.slide -->
+        <div class="swiper-slide works__slide">
+          <div class="works__img _ibg">
+            <img src="images/works/21.jpg" loading="lazy" width="" height="" alt="">
+          </div>
+        </div><!-- /.slide -->
+
+      </div><!-- /.swiper-wrapper -->
+    </div><!-- /.swipper -->
+
+    <div class="navigation works__navigation">
+      <div class="navigation__btn navigation__btn-prev works--prev">
+        <svg class="navigation__btn-svg" width="50" height="50" aria-hidden="true">
+          <use xlink:href="images/icons/sprite.svg#arrow-slider-dark"></use>
+        </svg>
+      </div><!-- /.arrow-prev -->
+      <div class="navigation__btn navigation__btn-next works--next">
+        <svg class="navigation__btn-svg" width="50" height="50" aria-hidden="true">
+          <use xlink:href="images/icons/sprite.svg#arrow-slider-dark"></use>
+        </svg>
+      </div><!-- /.arrow-next -->
+    </div><!-- /.pagination__nav -->
+
+    <div class="works__btns">
+      <a href="personal.html" class="btn-reset btn btn--about">Связаться</a>
+      <a href="personal.html" class="btn-reset btn btn--personal">Подробнее</a>
     </div>
 
-    <div class="about__container about__container-content">
-      <div class="about__content">
-        <div class="about__info">
-          <div class="about__text">Наша клиника работает на международном уровне уже более 15 лет. Наши клиенты из США,
-            ГЕРМАНИИ, ИТАЛИИ и других стран.</div>
-          <a href="reviews.html" class="about__link btn__link-more">Подробнее</a>
-        </div>
-        <a href="reviews.html" class="btn-reset btn btn--about">Подробнее</a>
-      </div><!-- /.about__content -->
-    </div><!-- /.about__container-content -->
-
-  </div><!-- /.about__wrap -->
-
-</section><!-- /.about -->
+  </div><!-- /.works__container -->
+</section><!-- /.works -->
+      
     </main>
 
     <footer class="footer">
