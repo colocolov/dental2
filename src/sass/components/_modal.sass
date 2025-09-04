@@ -1,0 +1,159 @@
+/* Модальное окно */
+.modal
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  opacity: 0
+  visibility: hidden
+  z-index: 100
+  // width: 100%
+  // height: 100%
+  background-color: rgba($white, 0.8)
+  cursor: pointer
+  overflow-y: auto
+  overflow-x: hidden
+  text-align: center
+  transition: 0.6s ease-in
+  &::before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    height: 100%
+  &.open
+    opacity: 1
+    visibility: visible
+    & .modal__content
+      opacity: 1
+      transform: translate(0px, 0%)
+
+  &__content
+    position: relative
+    width: 98%
+    max-width: 1280px
+    margin: 50px auto
+
+    // display: inline-block
+    display: inline-flex
+    vertical-align: middle
+    gap: 40px
+    align-items: center
+
+    background-color: $green
+    padding: 20px
+    text-align: center
+    color: $white
+    cursor: auto
+
+    opacity: 0
+    transform: translate(0px, -100%)
+
+    transition: 0.6s ease-in
+
+    @include mediaPhone
+      width: 95%
+      flex-direction: column
+    @include mediaPhoneSm
+      padding: 20px 30px
+
+    // внутреняя часть от страницы Контакты
+    & .contact-top
+      background-color: $green
+      flex-basis: 49%
+      width: 100%
+      padding-top: 0
+      color: $white
+      &__container
+        padding: 0
+      &__head
+        display: none
+      &__text
+        text-align: left
+      &__item
+        color: $white
+        border-bottom: 1px solid $white
+
+    & .contact-bottom
+      background-color: $green
+      flex-basis: 49%
+      width: 100%
+      padding: 0
+      &__container
+        padding: 0
+      &__text
+        text-align: left
+      // form
+        // position: relative
+      & .btn--send
+        border: 1px solid $white
+        color: $white
+
+    & .contact__form
+      border: 1px solid $white
+      margin-bottom: 15px
+    & .contact__line
+      border-bottom: 1px solid $white
+    & .contact__input
+      color: $white
+    & .contact__input::placeholder
+      color: rgba($white, 0.5)
+    & .contact__textarea
+      color: $white
+    & .contact__textarea::placeholder
+      color: rgba($white, 0.5)
+
+  &__btn
+    display: block
+    margin: 0 auto
+    margin-bottom: 37px
+    transition: border-color 0.3s ease-in
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        color: $white
+        border-color: $white
+    &-call
+      display: inline-block
+      // padding: 15px 37px
+      margin-bottom: 20px
+      background-color: #FBCB59
+      color: $green
+      font-weight: 700
+      letter-spacing: 0
+      border-color: #FBCB59
+      transition: background-color 0.5s ease-in
+
+  &__close
+    color: $white
+    font-size: 30px
+    line-height: 1
+    font-weight: bold
+    position: absolute
+    top: 20px
+    right: 20px
+    transition: color 0.3s ease
+    z-index: 30
+    &:hover,
+    &:focus
+      color: #a94a20
+      text-decoration: none
+      cursor: pointer
+
+
+.wpcf7 form.invalid .wpcf7-response-output
+  display: none
+
+// .wpcf7 form.invalid .wpcf7-not-valid-tip
+//   margin-top: 0
+//   border: 2px solid #dc3232
+//   padding: 1.2em 1em
+//   margin-bottom: 20px
+//   color: #fff
+
+.wpcf7 form.sent .wpcf7-response-output
+  margin-top: 0
+  padding: 1.2em 1em
+  margin-bottom: 20px
+
+.wpcf7-form .wpcf7-spinner
+  display: none

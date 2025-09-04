@@ -1,36 +1,33 @@
 <section class="main-serv">
   <div class="main-serv__container">
 
-    <h2 class="heading reviews__head">НАШИ ПАЦИЕНТЫ</h2>
+    <h2 class="heading reviews__head main-serv__head">Этапы лечения</h2>
 
-    <div class="video__wrap main-serv__video">
-
-      <div class="video__item">
-        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
-          <img src="@img/video-thumb/01.jpg" loading="lazy" width="320" height="570" alt="Review">
-          <button class="btn-reset video__btn">
-            <svg class="icon-svg video__svg" aria-hidden="true">
-              <use xlink:href="images/icons/sprite.svg#video-play"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="video__title">Вера</div>
-        <div class="video__subtitle">Германия</div>
-      </div><!-- /.video__item -->
-      <div class="video__item">
-        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
-          <img src="@img/video-thumb/01.jpg" loading="lazy" width="320" height="570" alt="Review">
-          <button class="btn-reset video__btn">
-            <svg class="icon-svg video__svg" aria-hidden="true">
-              <use xlink:href="images/icons/sprite.svg#video-play"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="video__title">Вера</div>
-        <div class="video__subtitle">Германия</div>
-      </div><!-- /.video__item -->
-
-    </div>
+    <ul class="main-serv__list">
+      <li class="main-serv__stage">
+        <div class="main-serv__num">1</div>
+        <div class="main-serv__name">Удаление зубного камня – бережно и эффективно</div>
+        <div class="main-serv__descr">С помощью аппарата woodpecker последнего поколения мы мягко удаляем твердые
+          отложения, которые не убираются при обычной
+          чистке. Без боли — только забота о здоровье ваших зубов и дёсен.</div>
+      </li><!-- /.main-serv__item -->
+      <li class="main-serv__stage">
+        <div class="main-serv__num">2</div>
+        <div class="main-serv__name">Удаление налёта – даже в труднодоступных местах</div>
+        <div class="main-serv__descr">Применяем технологию woodpecker Air Flow: струя воды, воздуха и порошка бережно
+          очищает эмаль, добираясь туда, куда не
+          достаёт щётка.</div>
+      </li><!-- /.main-serv__item -->
+      <li class="main-serv__stage">
+        <div class="main-serv__num">3</div>
+        <div class="main-serv__name">Полировка – гладкость и защита</div>
+        <div class="main-serv__descr">После чистки полируем зубы специальными пастами и щёточками. Поверхность
+          становится
+          гладкой, что помогает дольше
+          сохранить эффект и не допустить повторного налёта.</div>
+      </li><!-- /.main-serv__item -->
+    </ul>
+    <a href="#" class="btn-reset btn btn--dark">Связаться</a>
 
     <div class="main-serv__wrap">
 
@@ -120,6 +117,8 @@
       </div><!-- /.main-serv__item -->
 
     </div><!-- /.main-serv__wrap -->
+
+    @include('pacients.html')
 
   </div><!-- /.main-serv__container -->
 </section><!-- /.main-serv -->

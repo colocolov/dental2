@@ -12,20 +12,21 @@
 
   // .video__item
   &__item
-    flex: 0 1 320px
+    // flex: 0 1 320px
     // width: 320px
+    // max-height: 460px
     &:hover .video__btn svg
       fill: $green
 
   &__clip
     position: relative
-    height: 570px
+    // height: 570px
     width: 100%
     margin-bottom: 20px
     cursor: pointer
     @include mediaPhone
       height: auto
-      max-height: 570px
+      // max-height: 570px
     &::before
       content: ''
       position: absolute
@@ -51,6 +52,8 @@
       position: relative
       border: none
       display: block
+    img
+      height: auto
 
   &__btn
     position: absolute

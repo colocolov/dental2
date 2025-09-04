@@ -24,10 +24,12 @@ function documentActions(e) {
 // стрелка для выпадающего меню
 document.addEventListener('DOMContentLoaded', function() {
     const menuItemHasChildren = document.querySelectorAll('.menu-item-has-children');
-
+    
     menuItemHasChildren.forEach(function(item) {
         item.addEventListener('click', function(event) {
+            console.log(item);
             event.preventDefault(); // Отменяем стандартное действие ссылки
+            console.log('stop event');
             //this.classList.toggle('_active'); // Добавляем или удаляем класс active при клике
             event.stopPropagation(); // Останавливаем всплытие события клика, чтобы не закрывать меню
         });

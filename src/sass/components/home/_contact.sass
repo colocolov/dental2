@@ -1,0 +1,52 @@
+.contact
+
+  & .contact-top,
+  & .contact-bottom
+    background-color: $green
+    color: $bgc
+
+  & .contact-top__item
+    border-bottom: 1px solid $white
+    color: $bgc
+
+  & .contact-top__head
+    color: $bgc
+    &::before
+      background-color: $bgc
+
+  & .contact-top__link
+    transition: color 0.3s ease-in
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        color: $black
+
+  & .form__social
+    margin-top: 58px
+    padding-bottom: 10px
+    position: relative
+    margin-right: 0
+    padding-right: 35px
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 49.218%
+      height: 1px
+      background-color: $bgc
+
+  & .contact__line,
+  & .contact__text
+    border: 1px solid $white
+    & input,
+    & textarea
+      color: $white
+      &::placeholder
+        color: rgba($bgc, 0.5)
+
+  & .btn--send
+    border: 1px solid $white
+    color: $bgc
+    @media (any-hover: hover) and (pointer: fine)
+      &:hover
+        color: $green

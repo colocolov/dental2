@@ -1,31 +1,44 @@
 .hero-serv
   padding-top: 80px
+  // display: none
   @include mediaDesk
     padding-top: 40px
   @include mediaPhone
-    padding-top: 0
+    // padding-top: 0
 
   &--single
+    // display: block
     @include mediaNotebook
-      padding-top: 0
+      // padding-top: 0
     .hero-serv__container
+      gap: 84px
+      @include mediaTablet
+        flex-direction: column-reverse
+      @include mediaPhone
+        gap: 20px
     .hero-serv__img
+      @include mediaTablet
+        height: 480px
       &::before
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%)
       @include mediaPhone
-        position: unset
+        // position: unset
         height: auto
         img
           position: unset
           height: auto
+          border-radius: 20px
+          overflow: hidden
     .hero-serv__content
-      padding: 60px
+      // padding: 60px
       width: 100%
       justify-content: space-between
       align-items: unset
       // height: 100%
+      @include mediaTablet
+        max-width: none
       @include mediaPhone
-        padding: 40px
+        padding: 40px 0
         justify-content: flex-start
         height: auto
     .hero-serv__head
@@ -33,19 +46,31 @@
       @include mediaPhone
         font-size: 36px
         text-align: center
-        margin-bottom: 10px
+        margin-bottom: 20px
+        border-bottom: 1px solid $green
+
+    .hero-serv__text
+      @include mediaPhone
+        max-height: none
+        text-align: left
 
   // .hero-found__container
   &__container
     position: relative
+    display: flex
+    align-items: flex-start
+    // gap: 84px
+
 
   // .hero-found__img
   &__img
-    position: absolute
-    top: 0
-    left: 0
+    // position: absolute
+    // top: 0
+    // left: 0
     width: 100%
-    padding-bottom: 48.091603% // 630/1310
+    padding-bottom: 49.22% // 630/1310
+    border-radius: 20px
+    overflow: hidden
     &-main
       &::before
         content: ''
@@ -67,7 +92,8 @@
 
   // .hero-found__content
   &__content
-    height: 630px
+    max-width: 566px
+    // height: 630px
     position: relative
     display: flex
     align-items: center
@@ -75,21 +101,42 @@
     flex-direction: column
     z-index: 1
     @include mediaPhone
-      height: 550px
+      // height: 550px
 
   // .hero-found__head
-  &__head
-    font-family: 'Forum'
+  &__suphead
+    font-family: 'Montserrat'
     font-size: 50px
     color: $white
+    font-weight: 800
+    color: $green
+    text-transform: uppercase
+    @include mediaPhone
+      text-align: center
+
+  &__head
+    text-transform: uppercase
+    margin-bottom: 20px
+    font-family: 'Forum'
+    font-weight: 400
+    font-size: 50px
+
+  &__descr
+    // font-family: var(--font-family);
+    font-weight: 600
+    font-size: 24px
+    margin-bottom: 20px
 
   &__text
-    max-width: 732px
+    // max-width: 732px
     margin-left: auto
-    @include font(600, 20, 24)
-    color: $white
+    // @include font(600, 20, 24)
+    // color: $white
     p:not(:last-child)
-      margin-bottom: 7px
+      margin-bottom: 20px
+    span
+      display: block
+      font-weight: bold
     @include mediaPhone
       font-size: 16px
       text-align: center
@@ -99,10 +146,27 @@
     &.expanded
       max-height: 400px
     &--more
-      display: none
+      position: absolute
+      bottom: 40px
+      left: 50%
+      transform: translateX(-50%)
+      background-color: $green
+      color: $white
+      box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.25)
+      border-color: transparent
+      &::before
+        border-color: transparent
+      &:active
+        transform: translate(-50.5%, -2px)
+        @include mediaPhone
+          transform: translate(0, -2px)
       @include mediaPhone
+        transform: translate(0, 0)
+        left: 0
+        bottom: 0
+        position: relative
         margin: 0 auto
-        margin-top: 7px
+        margin-top: 15px
         color: $white
         display: block
         line-height: 2

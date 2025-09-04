@@ -91,27 +91,45 @@
     <main class="main">
       <section class="hero-serv hero-serv--single">
   <div class="hero-serv__container">
-    <div class="hero-serv__img _ibg">
 
-      <picture>
-        <source srcset="images/services/estetica-mob.jpg" media="(max-width: 767px)">
-        <img src="images/services/hero-serv.jpg" loading="lazy" alt="Service">
-      </picture>
+    <div class="hero-serv__content">
+      <h1 class="hero-serv__suphead">Эстетика</h1>
+      <div class="hero-serv__head">чистка</div>
+      <div class="hero-serv__descr">
+        Професианальная гигиена — больше, чем чистка зубов (Рекомендуется делать чистку зубов 1 раз в пол года)
+      </div>
+      <div class="hero-serv__text ">
+        <p>
+          <span>Профилактика — залог здоровья</span>
+          Удаляем налёт и камень с помощью новейшего аппарата woodpecker, которые могут стать причиной кариеса,
+          воспалений и
+          других проблем. Это простое действие помогает избежать сложного лечения в будущем.
+        </p>
+        <p>
+          <span>Свежесть, которую чувствуешь</span>
+          Бактерии в налёте — основная причина неприятного запаха. После процедуры дыхание становится свежее, а вы —
+          спокойнее и
+          увереннее.
+        </p>
+        <p>
+          <span>Ваша улыбка — в лучшем свете</span>
+          Без отбеливания — просто чистка, но эффект заметен сразу. Зубы светлее, улыбка —
+          естественная и ухоженная.
+        </p>
+        <p>
+          <span>Долговечность — в деталях</span>
+          Чистка помогает пломбам и реставрациям служить дольше. Это продлевает здоровье зубов и бережёт ваш бюджет.
+        </p>
+      </div>
 
     </div>
-    <div class="hero-serv__content">
-      <h1 class="hero-serv__head unvisible">Эстетика</h1>
-      <div class="hero-serv__text unvisible">
-        <p>Эстетика стоматологии направлена на улучшение внешнего вида улыбки, делая ее более приятной и
-          привлекательной. Это
-          область, которая следует определенным принципам, но определяется творчеством и художественным чувством
-          специалистов в
-          области эстетической стоматологии. </p>
-        <p>Результаты этой практики достигаются через междисциплинарное сотрудничество
-          и имеют
-          значительное влияние на качество жизни пациентов.</p>
-      </div>
-      <button id="showMoreBtn" class="btn-reset hero-serv__text--more">Подробнее</button>
+
+    <div class="hero-serv__img _ibg">
+      <picture>
+        <source srcset="images/services/estetica-mob-2.jpg" media="(max-width: 767px)">
+        <img src="images/services/hero-serv.jpg" loading="lazy" alt="Service">
+      </picture>
+      <button id="showMoreBtn333" class="btn-reset btn hero-serv__text--more openModalBtn">Связаться</button>
     </div>
 
   </div><!-- /.hero-serv__container -->
@@ -119,36 +137,33 @@
       <section class="main-serv">
   <div class="main-serv__container">
 
-    <h2 class="heading reviews__head">НАШИ ПАЦИЕНТЫ</h2>
+    <h2 class="heading reviews__head main-serv__head">Этапы лечения</h2>
 
-    <div class="video__wrap main-serv__video">
-
-      <div class="video__item">
-        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
-          <img src="images/video-thumb/01.jpg" loading="lazy" width="320" height="570" alt="Review">
-          <button class="btn-reset video__btn">
-            <svg class="icon-svg video__svg" aria-hidden="true">
-              <use xlink:href="images/icons/sprite.svg#video-play"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="video__title">Вера</div>
-        <div class="video__subtitle">Германия</div>
-      </div><!-- /.video__item -->
-      <div class="video__item">
-        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
-          <img src="images/video-thumb/01.jpg" loading="lazy" width="320" height="570" alt="Review">
-          <button class="btn-reset video__btn">
-            <svg class="icon-svg video__svg" aria-hidden="true">
-              <use xlink:href="images/icons/sprite.svg#video-play"></use>
-            </svg>
-          </button>
-        </div>
-        <div class="video__title">Вера</div>
-        <div class="video__subtitle">Германия</div>
-      </div><!-- /.video__item -->
-
-    </div>
+    <ul class="main-serv__list">
+      <li class="main-serv__stage">
+        <div class="main-serv__num">1</div>
+        <div class="main-serv__name">Удаление зубного камня – бережно и эффективно</div>
+        <div class="main-serv__descr">С помощью аппарата woodpecker последнего поколения мы мягко удаляем твердые
+          отложения, которые не убираются при обычной
+          чистке. Без боли — только забота о здоровье ваших зубов и дёсен.</div>
+      </li><!-- /.main-serv__item -->
+      <li class="main-serv__stage">
+        <div class="main-serv__num">2</div>
+        <div class="main-serv__name">Удаление налёта – даже в труднодоступных местах</div>
+        <div class="main-serv__descr">Применяем технологию woodpecker Air Flow: струя воды, воздуха и порошка бережно
+          очищает эмаль, добираясь туда, куда не
+          достаёт щётка.</div>
+      </li><!-- /.main-serv__item -->
+      <li class="main-serv__stage">
+        <div class="main-serv__num">3</div>
+        <div class="main-serv__name">Полировка – гладкость и защита</div>
+        <div class="main-serv__descr">После чистки полируем зубы специальными пастами и щёточками. Поверхность
+          становится
+          гладкой, что помогает дольше
+          сохранить эффект и не допустить повторного налёта.</div>
+      </li><!-- /.main-serv__item -->
+    </ul>
+    <a href="#" class="btn-reset btn btn--dark">Связаться</a>
 
     <div class="main-serv__wrap">
 
@@ -239,6 +254,117 @@
 
     </div><!-- /.main-serv__wrap -->
 
+    <h2 class="heading reviews__head">НАШИ ПАЦИЕНТЫ</h2>
+
+<div class="main-serv__video">
+
+  <div class="swiper works__slider">
+    <div class="swiper-wrapper works__slider-wrap">
+      <div class="swiper-slide video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+      <div class="swiper-slide video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+      <div class="swiper-slide video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+      <div class="swiper-slide video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+      <div class="swiper-slide video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+      <div class="swiper-slide video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+      <div class="swiper-slide video__item">
+        <div class="video__clip" data-video="https://digitalsmile.info/resources/video/01.mp4">
+          <img src="images/video-thumb/01.jpg" loading="lazy" alt="Review">
+          <button class="btn-reset video__btn">
+            <svg class="icon-svg video__svg" aria-hidden="true">
+              <use xlink:href="images/icons/sprite.svg#video-play"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="video__title">Вера</div>
+        <div class="video__subtitle">Германия</div>
+      </div><!-- /.video__item -->
+    </div><!-- /.swiper-wrapper -->
+  </div><!-- /.swipper -->
+
+  <div class="navigation works__navigation">
+    <div class="navigation__btn navigation__btn-prev works--prev">
+      <svg class="navigation__btn-svg" width="50" height="50" aria-hidden="true">
+        <use xlink:href="images/icons/sprite.svg#arrow-slider-dark"></use>
+      </svg>
+    </div><!-- /.arrow-prev -->
+    <div class="navigation__btn navigation__btn-next works--next">
+      <svg class="navigation__btn-svg" width="50" height="50" aria-hidden="true">
+        <use xlink:href="images/icons/sprite.svg#arrow-slider-dark"></use>
+      </svg>
+    </div><!-- /.arrow-next -->
+  </div><!-- /.pagination__nav -->
+
+  <a href="#" class="btn-reset btn btn--about">ЗАПИСАТЬСЯ НА БЕСПЛАТНУЮ
+    КОНСУЛЬТАЦИЮ</a>
+
+</div>
+
   </div><!-- /.main-serv__container -->
 </section><!-- /.main-serv -->
       <section class="about about--dark about--single">
@@ -313,6 +439,86 @@
 
   </div><!-- /.container -->
 </footer><!-- /.footer -->
+    <!-- Модальное окно -->
+<div id="modal" class="modal">
+  <div class="modal__content">
+    <span id="closeModal" class="modal__close">&times;</span>
+
+    <section class="contact-top">
+  <div class="contact-top__container">
+
+    <h2 class="heading contact-top__head">Контакты</h2>
+
+    <div class="contact-top__info">
+      <p class="contact-top__text">Назначьте время для консультации, свяжитесь с нами</p>
+      <div class="contact-top__item">
+        <div class="contact-top__name">e-mail</div>
+        <a href="mailto:smile.master.md@gmail.com" class="contact-top__link">smile.master.md@gmail.com</a>
+      </div>
+      <div class="contact-top__item">
+        <div class="contact-top__name">Phone number </div>
+        <a href="tel:+37379377712" class="contact-top__link">+373 (79) 377-712</a>
+      </div>
+    </div>
+
+    <ul class="form__social social">
+      <li class="social__item">
+        <a href="#" class="social__icon" target="_blank">
+          <div class="social__img">
+            <img src="images/icons/insta.svg" loading="lazy" width="30" height="30" alt="icon">
+          </div>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__icon" target="_blank">
+          <div class="social__img">
+            <img src="images/icons/fb.svg" loading="lazy" width="30" height="30" alt="icon">
+          </div>
+        </a>
+      </li>
+    </ul>
+
+
+  </div>
+</section>
+    <section class="contact-bottom">
+  <div class="contact-bottom__container">
+
+    <h2 class="heading contact-top__head">Остались вопросы?</h2>
+
+    <div class="contact-bottom__wrap">
+      <form action="#" class="wpcf7-form">
+        <p class="contact-bottom__text">Заполните форму и мы свяжемся с&nbsp;вами для консультации</p>
+        <div class="contact__form">
+          <div class="contact__line">
+            <input id="name" class="contact__input" type="text" placeholder="Имя, фамилия">
+          </div>
+          <div class="contact__line">
+            <input id="phone" class="contact__input" type="email" placeholder="Номер телефона">
+          </div>
+          <div class="contact__line">
+            <input id="email" class="contact__input" type="email" placeholder="Email">
+          </div>
+          <div class="contact__text">
+            <textarea id="message" class="contact__textarea" name="text" placeholder="Сообщение"></textarea>
+            <!-- <button class="contact__send"><svg class="" aria-hidden="true">
+            <use xlink:href="images/icons/sprite.svg#send"></use>
+          </svg></button> -->
+          </div>
+        </div>
+        <!-- /.contact__form -->
+        <p>
+          <input class="wpcf7-form-control has-spinner wpcf7-submit btn-reset btn btn--send" type="submit"
+                 value="Отправить">
+        </p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+  </div>
+</div>
   </div><!-- /.wrapper -->
 </body>
 
